@@ -6,10 +6,11 @@ const WhatsAppButton = () => {
       href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20healthcare%20assistance"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-primary-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200"
+      className="fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full bg-brand-green text-white flex items-center justify-center shadow-premium hover:scale-110 transition-all duration-300 group"
       aria-label="Chat on WhatsApp"
     >
-      <MessageCircle className="w-7 h-7" />
+      <div className="absolute inset-0 rounded-full bg-brand-green animate-ping opacity-20 pointer-events-none group-hover:hidden" />
+      <MessageCircle className="w-8 h-8 relative z-10" />
     </a>
   );
 };

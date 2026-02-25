@@ -2,60 +2,89 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    location: "Delhi",
-    text: "Awate Healthcare made my mother's knee replacement journey so smooth. From hospital selection to post-surgery follow-up, they were with us every step.",
-    rating: 5,
-  },
-  {
     name: "Rajesh Kumar",
-    location: "Chennai",
-    text: "I was confused about where to get my cardiac bypass done. The team at Awate guided me to one of the best hospitals and saved me nearly 40% on costs.",
-    rating: 5,
+    city: "Mumbai",
+    treatment: "Bypass Surgery",
+    text: "Awate Healthcare's team was incredible. They connected me with the top cardiac surgeon in Mumbai and managed all hospital formalities. Truly life-saving.",
+    image: "https://i.pravatar.cc/150?u=a042581f4e29026704d"
   },
   {
-    name: "Anitha Desai",
-    location: "Mumbai",
-    text: "The second opinion service was invaluable. They connected me with a specialist who suggested a much less invasive procedure. Highly recommend!",
-    rating: 5,
+    name: "Priya Sharma",
+    city: "Delhi",
+    treatment: "IVF Treatment",
+    text: "From my first call to my final treatment, everything was handled with such care. They provided options that fit my budget without compromising on quality.",
+    image: "https://i.pravatar.cc/150?u=a04258114e29026702d"
   },
+  {
+    name: "Samuel D'souza",
+    city: "Goa",
+    treatment: "Knee Replacement",
+    text: "The cost transparency was what impressed me most. I knew exactly what I was paying for before checking into the hospital. Great coordination!",
+    image: "https://i.pravatar.cc/150?u=a042581f4e29026704f"
+  }
 ];
 
 const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-background">
-      <div className="container-max">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Testimonials</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
-            Discover What Our Patients Have to Say
+    <section id="testimonials" className="section-padding bg-light relative overflow-hidden">
+      {/* Decorative Blur */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container-max relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
+          <span className="text-brand-red font-bold text-sm uppercase tracking-[0.3em]">Patient Stories</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary font-display">
+            Restoring Health, Building Trust
           </h2>
-          <p className="text-muted-foreground">
-            Real stories from real patients who trusted us with their healthcare journey.
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            Don't just take our word for it. Hear from patients who successfully navigated their
+            healthcare journeys with our support.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <div key={i} className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-shadow duration-300 relative">
-              <Quote className="w-8 h-8 text-secondary/20 absolute top-6 right-6" />
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                ))}
-              </div>
-              <p className="text-foreground/80 text-sm leading-relaxed mb-5">"{t.text}"</p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full gradient-healthcare flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">{t.name[0]}</span>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((item, i) => (
+            <div key={i} className="bg-white p-10 rounded-[2.5rem] shadow-premium relative group hover:-translate-y-2 transition-all duration-500">
+              <Quote className="absolute top-8 right-10 w-12 h-12 text-brand-blue/5 -z-0 group-hover:text-brand-blue/10 transition-colors" />
+
+              <div className="relative z-10 space-y-6">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className="w-4 h-4 fill-brand-green text-brand-green" />
+                  ))}
                 </div>
-                <div>
-                  <p className="font-semibold text-sm text-foreground">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.location}</p>
+
+                <p className="text-lg text-primary/80 font-medium leading-relaxed italic">
+                  "{item.text}"
+                </p>
+
+                <div className="pt-6 border-t border-brand-blue/5 flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-md">
+                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-primary tracking-tight">{item.name}</p>
+                      <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{item.city}</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="px-3 py-1 bg-brand-green/10 text-brand-green text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse" />
+                      Verified
+                    </div>
+                    <p className="text-[10px] font-bold text-muted-foreground mt-1 uppercase tracking-tighter">{item.treatment}</p>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <button className="text-primary font-bold text-sm uppercase tracking-[0.2em] hover:text-brand-red transition-colors flex items-center gap-3 mx-auto group">
+            Watch Video Success Stories <span className="w-10 h-10 rounded-full border border-brand-blue/20 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-all">▶</span>
+          </button>
         </div>
       </div>
     </section>

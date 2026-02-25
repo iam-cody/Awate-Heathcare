@@ -1,38 +1,32 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import PartnersSection from "@/components/PartnersSection";
 import AboutSection from "@/components/AboutSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import ServicesSection from "@/components/ServicesSection";
-import AppointmentCTA from "@/components/AppointmentCTA";
+import ProcessSection from "@/components/ProcessSection";
+import TreatmentsSection from "@/components/TreatmentsSection";
+import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import TeamSection from "@/components/TeamSection";
+import WhyChooseSection from "@/components/WhyChooseSection";
 import FAQSection from "@/components/FAQSection";
-import AppointmentForm from "@/components/AppointmentForm";
-import BlogSection from "@/components/BlogSection";
-import NewsletterCTA from "@/components/NewsletterCTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen bg-white selection:bg-brand-blue selection:text-white">
       <Navbar />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <FeaturesSection />
-        <ServicesSection />
-        <AppointmentCTA />
-        <TestimonialsSection />
-        <TeamSection />
-        <FAQSection />
-        <AppointmentForm />
-        <BlogSection />
-        <NewsletterCTA />
-      </main>
+      <HeroSection />
+      <PartnersSection />
+      <AboutSection />
+      <ProcessSection />
+      <TreatmentsSection />
+      <WhyChooseSection />
+      <PricingSection />
+      <TestimonialsSection />
+      <FAQSection />
       <Footer />
       <WhatsAppButton />
-    </div>
+    </main>
   );
 };
 

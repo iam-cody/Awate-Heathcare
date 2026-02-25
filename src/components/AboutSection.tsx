@@ -1,54 +1,79 @@
 import { CheckCircle2 } from "lucide-react";
 import aboutImg from "@/assets/about-hospital.jpg";
-import appointmentImg from "@/assets/appointment-bg.jpg";
 
 const highlights = [
-  "Comprehensive Hospital Network Across India",
-  "Transparent Treatment Cost Estimates",
-  "Dedicated Patient Coordinators",
-  "24/7 Support & Follow-up Care",
-  "Partnered With Top NABH Hospitals",
-  "Multilingual Assistance Available",
+  "10+ Years of Healthcare Experience",
+  "Dedicated Case Manager for Every Patient",
+  "Transparent Treatment Cost Guidance",
+  "End-to-End Treatment Coordination Support",
+  "Partnered with top NABH & JCI Hospitals",
+  "Zero Facilitation Charges for Patients",
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-white">
-      <div className="container-max">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Images */}
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-card">
-              <img src={aboutImg} alt="Modern hospital facility" className="w-full h-72 md:h-96 object-cover" loading="lazy" />
+    <section id="about" className="section-padding bg-light relative overflow-hidden">
+      {/* Decorative Blur */}
+      <div className="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container-max relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          {/* Left: Images */}
+          <div className="relative group">
+            <div className="rounded-[2.5rem] overflow-hidden shadow-premium border-8 border-white aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
+              <img
+                src={aboutImg}
+                alt="Modern corporate hospital facility"
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
             </div>
-            <div className="absolute -bottom-6 -right-4 w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border-4 border-card shadow-card-hover hidden sm:block">
-              <img src={appointmentImg} alt="Doctor patient consultation" className="w-full h-full object-cover" loading="lazy" />
-            </div>
+
             {/* Experience badge */}
-            <div className="absolute -top-4 -left-4 bg-secondary text-secondary-foreground rounded-xl p-4 shadow-card-hover font-display">
-              <p className="text-2xl font-bold">10+</p>
-              <p className="text-xs">Years of<br />Experience</p>
+            <div className="absolute -bottom-10 -right-6 glass-card p-8 rounded-[2rem] shadow-premium animate-bounce-subtle">
+              <p className="text-5xl font-bold font-display text-primary leading-tight">10+</p>
+              <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest mt-1">Years of<br />Trusted Care</p>
+            </div>
+
+            {/* Shield decoration */}
+            <div className="absolute -top-10 -left-10 w-24 h-24 bg-brand-blue/10 rounded-3xl flex items-center justify-center -z-10 group-hover:scale-110 transition-transform duration-500">
+              <span className="text-5xl opacity-50">🛡️</span>
             </div>
           </div>
 
-          {/* Text */}
+          {/* Right: Text */}
           <div className="space-y-6">
-            <span className="text-secondary font-semibold text-sm uppercase tracking-wider">About Us</span>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-primary font-display">
-              Guiding Patients to the Right Care, Every Time
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Awate Healthcare is India's trusted healthcare guidance platform. We help patients navigate
-              complex medical decisions by connecting them with the right hospitals, doctors, and treatment
-              plans — ensuring quality care at transparent costs.
+            <div className="space-y-4">
+              <span className="inline-block text-brand-red font-bold text-sm uppercase tracking-[0.3em]">Direct Patient Guidance</span>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight text-primary font-display">
+                Guiding Patients to the <br />Right Care, Every Time
+              </h2>
+            </div>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Awate Healthcare is India's premier healthcare coordination partner. We understand that finding
+              the best treatment can be overwhelming. Our mission is to simplify your medical journey
+              by bridging the gap between you and world-class medical excellence.
             </p>
-            <div className="grid sm:grid-cols-2 gap-3 pt-2">
+
+            <div className="grid sm:grid-cols-1 gap-4 pt-2">
               {highlights.map((item, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground/80">{item}</span>
+                <div key={i} className="flex items-center gap-4 group">
+                  <div className="w-6 h-6 rounded-full bg-brand-green/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-green/20 transition-colors">
+                    <CheckCircle2 className="w-4 h-4 text-brand-green" />
+                  </div>
+                  <span className="text-base font-semibold text-primary/80">{item}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="pt-6">
+              <blockquote className="border-l-4 border-brand-red pl-6 py-2">
+                <p className="italic text-primary font-medium text-lg">
+                  "Choosing the right hospital shouldn't be a matter of luck. We turn it into a transparent, data-driven choice."
+                </p>
+                <footer className="mt-2 font-bold text-sm text-brand-red uppercase tracking-wider">— Team Awate</footer>
+              </blockquote>
             </div>
           </div>
         </div>

@@ -107,6 +107,10 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        "bounce-subtle": {
+          "0%, 100%": { transform: "translateY(-5%)" },
+          "50%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -116,6 +120,7 @@ export default {
         "pulse-green": "pulse-green 2s ease-out infinite",
         "loading-bar": "loading-bar 1.5s ease-in-out infinite",
         "fade-in": "fade-in 0.8s ease-out forwards",
+        "bounce-subtle": "bounce-subtle 4s ease-in-out infinite",
       },
     },
   },

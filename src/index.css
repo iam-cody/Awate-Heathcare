@@ -104,11 +104,15 @@
 
 @layer utilities {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    @apply px-4 sm:px-6 lg:px-8 py-[50px] md:py-[80px];
   }
 
   .container-max {
     @apply max-w-7xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
   }
 
   .gradient-healthcare {
@@ -120,10 +124,38 @@
   }
 
   .shadow-card {
-    box-shadow: 0 4px 24px -4px hsl(var(--brand-blue) / 0.08);
+    box-shadow: 0 10px 40px -10px hsl(var(--brand-blue) / 0.08);
   }
 
   .shadow-card-hover {
-    box-shadow: 0 12px 40px -8px hsl(var(--brand-blue) / 0.15);
+    box-shadow: 0 20px 50px -15px hsl(var(--brand-blue) / 0.12);
+  }
+
+  .shadow-premium {
+    box-shadow: 0 30px 60px -12px rgba(15, 76, 117, 0.12);
+  }
+
+  .bg-light {
+    background-color: #F5FAFC;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-premium;
   }
 }
