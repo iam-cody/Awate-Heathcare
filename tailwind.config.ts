@@ -58,6 +58,9 @@ export default {
           "light-blue": "hsl(var(--healthcare-light-blue))",
           teal: "hsl(var(--healthcare-teal))",
         },
+        "brand-green": "hsl(var(--brand-green))",
+        "brand-red": "hsl(var(--brand-red))",
+        "brand-blue": "hsl(var(--brand-blue))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -91,12 +94,28 @@ export default {
           from: { opacity: "0", transform: "scale(0.8)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
+        "pulse-green": {
+          "0%": { transform: "scale(1)", opacity: "0.5" },
+          "50%": { transform: "scale(1.2)", opacity: "0.2" },
+          "100%": { transform: "scale(1.4)", opacity: "0" },
+        },
+        "loading-bar": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(200%)" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
         "count-up": "count-up 0.5s ease-out forwards",
+        "pulse-green": "pulse-green 2s ease-out infinite",
+        "loading-bar": "loading-bar 1.5s ease-in-out infinite",
+        "fade-in": "fade-in 0.8s ease-out forwards",
       },
     },
   },
