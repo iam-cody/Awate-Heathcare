@@ -11,12 +11,12 @@ const treatments = [
 
 const ServicesSection = () => {
   return (
-    <section className="section-padding bg-card">
+    <section className="section-padding bg-white">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Treatments Covered</span>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-primary font-display">
               Comprehensive Healthcare Services Tailored to Your Needs
             </h2>
             <p className="text-muted-foreground leading-relaxed">

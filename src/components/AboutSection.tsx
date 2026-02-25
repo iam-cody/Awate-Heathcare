@@ -13,7 +13,7 @@ const highlights = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-card">
+    <section id="about" className="section-padding bg-white">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Images */}
@@ -25,16 +25,16 @@ const AboutSection = () => {
               <img src={appointmentImg} alt="Doctor patient consultation" className="w-full h-full object-cover" loading="lazy" />
             </div>
             {/* Experience badge */}
-            <div className="absolute -top-4 -left-4 bg-secondary text-secondary-foreground rounded-xl p-4 shadow-card-hover">
+            <div className="absolute -top-4 -left-4 bg-secondary text-secondary-foreground rounded-xl p-4 shadow-card-hover font-display">
               <p className="text-2xl font-bold">10+</p>
-              <p className="text-xs">Years of<br/>Experience</p>
+              <p className="text-xs">Years of<br />Experience</p>
             </div>
           </div>
 
           {/* Text */}
           <div className="space-y-6">
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">About Us</span>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-primary font-display">
               Guiding Patients to the Right Care, Every Time
             </h2>
             <p className="text-muted-foreground leading-relaxed">

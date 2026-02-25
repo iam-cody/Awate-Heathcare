@@ -6,51 +6,48 @@
 
 @layer base {
   :root {
-    --background: 210 33% 98%;
-    --foreground: 215 50% 15%;
+    /* Brand Colors (Converted from Hex to HSL) */
+    /* Primary Blue: #0F4C75 -> 205 77% 26% */
+    /* Primary Red: #E03E52 -> 352 73% 56% */
+    /* Accent Green: #119B4A -> 145 80% 34% */
+    /* Light Background: #F5FAFC -> 197 45% 97% */
+
+    --background: 197 45% 97%;
+    --foreground: 205 77% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 50% 15%;
+    --card-foreground: 205 77% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 50% 15%;
+    --popover-foreground: 205 77% 20%;
 
-    --primary: 215 60% 22%;
+    --primary: 205 77% 26%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 168 65% 38%;
+    --secondary: 145 80% 34%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 25% 95%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 197 20% 92%;
+    --muted-foreground: 205 20% 45%;
 
-    --accent: 168 65% 38%;
+    --accent: 352 73% 56%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 352 73% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 168 65% 38%;
+    --border: 205 20% 90%;
+    --input: 205 20% 90%;
+    --ring: 205 77% 26%;
 
     --radius: 0.75rem;
 
-    /* Custom healthcare tokens */
-    --healthcare-dark-blue: 215 60% 22%;
-    --healthcare-green: 168 65% 38%;
-    --healthcare-red: 0 72% 51%;
-    --healthcare-light-blue: 200 60% 96%;
-    --healthcare-teal: 174 55% 45%;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom brand tokens */
+    --brand-blue: 205 77% 26%;
+    --brand-red: 352 73% 56%;
+    --brand-red-dark: 352 73% 45%;
+    --brand-green: 145 80% 34%;
+    --brand-light: 197 45% 97%;
   }
 
   .dark {
@@ -94,7 +91,12 @@
     font-family: 'DM Sans', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Playfair Display', serif;
     @apply text-primary;
   }
@@ -110,18 +112,18 @@
   }
 
   .gradient-healthcare {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--healthcare-teal)) 100%);
+    background: linear-gradient(135deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-green)) 100%);
   }
 
   .gradient-cta {
-    background: linear-gradient(135deg, hsl(var(--healthcare-red)) 0%, hsl(0 72% 45%) 100%);
+    background: linear-gradient(135deg, hsl(var(--brand-red)) 0%, hsl(var(--brand-red-dark)) 100%);
   }
 
   .shadow-card {
-    box-shadow: 0 4px 24px -4px hsl(var(--primary) / 0.08);
+    box-shadow: 0 4px 24px -4px hsl(var(--brand-blue) / 0.08);
   }
 
   .shadow-card-hover {
-    box-shadow: 0 12px 40px -8px hsl(var(--primary) / 0.15);
+    box-shadow: 0 12px 40px -8px hsl(var(--brand-blue) / 0.15);
   }
 }

@@ -5,12 +5,12 @@ import appointmentImg from "@/assets/appointment-bg.jpg";
 
 const AppointmentForm = () => {
   return (
-    <section id="contact" className="section-padding bg-card">
+    <section id="contact" className="section-padding bg-background">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-primary font-display">
               Book Your Appointment Today
             </h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -28,7 +28,7 @@ const AppointmentForm = () => {
                 <Input placeholder="City" className="bg-background" />
               </div>
               <Textarea placeholder="Describe your medical concern..." className="bg-background min-h-[100px]" />
-              <Button type="submit" size="lg" className="w-full sm:w-auto gradient-cta text-primary-foreground border-0 hover:opacity-90 px-10">
+              <Button type="submit" size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-destructive/90 px-10 transition-colors">
                 Submit
               </Button>
             </form>

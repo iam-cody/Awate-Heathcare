@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-medical.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative pt-20 md:pt-24 overflow-hidden bg-healthcare-light-blue">
+    <section id="home" className="relative pt-20 md:pt-24 overflow-hidden bg-background">
       <div className="container-max section-padding pb-0 md:pb-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text */}
@@ -12,7 +12,7 @@ const HeroSection = () => {
             <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-medium">
               We Take Care of You Always
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-primary">
               Trusted Healthcare Guidance Across{" "}
               <span className="text-secondary">India</span>
             </h1>
@@ -21,10 +21,10 @@ const HeroSection = () => {
               transparent, and quality treatment — every step of the way.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Button size="lg" className="gradient-cta text-primary-foreground border-0 hover:opacity-90 gap-2 px-8">
+              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-destructive/90 gap-2 px-8 transition-colors">
                 Book Appointment <ArrowRight className="w-4 h-4" />
               </Button>
-              <Button size="lg" variant="outline" className="gap-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
+              <Button size="lg" variant="outline" className="gap-2 border-primary text-primary hover:bg-primary/5">
                 <Play className="w-4 h-4" /> Watch Video
               </Button>
             </div>
@@ -55,7 +55,7 @@ const HeroSection = () => {
       </div>
 
       {/* Stats Bar */}
-      <div className="gradient-healthcare mt-12 md:mt-16">
+      <div className="bg-primary mt-12 md:mt-16">
         <div className="container-max grid grid-cols-2 md:grid-cols-4 gap-6 py-8 px-4 sm:px-6 lg:px-8">
           {[
             { value: "20,000+", label: "Patients Assisted" },

@@ -16,17 +16,15 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border">
       <div className="container-max flex items-center justify-between h-16 md:h-20 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg gradient-healthcare flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">A</span>
-          </div>
-          <div className="leading-tight">
-            <span className="font-display font-bold text-lg text-primary block leading-none">Awate</span>
-            <span className="text-xs text-muted-foreground tracking-wide">Healthcare</span>
-          </div>
+        <a href="#home" className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="Awate Healthcare Logo"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -35,7 +33,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-secondary transition-colors rounded-md"
+              className="px-3 py-2 text-sm font-medium text-primary hover:text-secondary transition-colors rounded-md"
             >
               {link.label}
             </a>
@@ -44,11 +42,11 @@ const Navbar = () => {
 
         {/* CTAs */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+919876543210" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-secondary transition-colors">
+          <a href="tel:+919876543210" className="flex items-center gap-2 text-sm text-primary hover:text-secondary transition-colors font-medium">
             <Phone className="w-4 h-4" />
             +91 98765 43210
           </a>
-          <Button className="gradient-cta text-primary-foreground border-0 hover:opacity-90 transition-opacity">
+          <Button className="bg-accent text-accent-foreground hover:bg-destructive/90 transition-colors">
             Book Appointment
           </Button>
         </div>

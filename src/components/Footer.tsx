@@ -2,19 +2,17 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="gradient-healthcare text-primary-foreground">
+    <footer className="bg-primary text-primary-foreground">
       <div className="container-max section-padding pb-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-lg bg-primary-foreground/20 flex items-center justify-center">
-                <span className="font-bold text-lg">A</span>
-              </div>
-              <div className="leading-tight">
-                <span className="font-display font-bold text-lg block leading-none">Awate</span>
-                <span className="text-xs text-primary-foreground/70 tracking-wide">Healthcare</span>
-              </div>
+            <div className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="Awate Healthcare Logo"
+                className="h-10 w-auto object-contain invert"
+              />
             </div>
             <p className="text-sm text-primary-foreground/70 leading-relaxed">
               India's trusted healthcare guidance platform connecting patients with the best hospitals and specialists.
