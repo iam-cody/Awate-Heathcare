@@ -36,8 +36,10 @@ const AboutSection = () => {
             </div>
 
             {/* Shield decoration */}
-            <div className="absolute -top-10 -left-10 w-24 h-24 bg-brand-blue/10 rounded-3xl flex items-center justify-center -z-10 group-hover:scale-110 transition-transform duration-500">
-              <span className="text-5xl opacity-50">🛡️</span>
+            <div className="absolute -top-8 -left-8 w-24 h-24 bg-white rounded-3xl flex items-center justify-center z-20 shadow-premium group-hover:scale-110 transition-transform duration-500 border border-brand-blue/5">
+              <div className="w-full h-full rounded-3xl bg-brand-blue/5 flex items-center justify-center">
+                <span className="text-5xl">🛡️</span>
+              </div>
             </div>
           </div>
 
