@@ -12,7 +12,8 @@
     /* Accent Green: #119B4A -> 145 80% 34% */
     /* Light Background: #F5FAFC -> 197 45% 97% */
 
-    --background: 197 45% 97%;
+    --background: 216 33% 98%;
+    /* #F7F9FC */
     --foreground: 205 77% 20%;
 
     --card: 0 0% 100%;
@@ -104,7 +105,7 @@
 
 @layer utilities {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-[50px] md:py-[80px];
+    @apply px-4 sm:px-6 lg:px-8 py-[40px] md:py-[60px];
   }
 
   .container-max {
@@ -132,7 +133,7 @@
   }
 
   .shadow-premium {
-    box-shadow: 0 30px 60px -12px rgba(15, 76, 117, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
   }
 
   .bg-light {

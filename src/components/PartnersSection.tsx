@@ -13,7 +13,7 @@ const hospitalPartners = [
 
 const PartnersSection = () => {
     return (
-        <section className="py-12 bg-white border-y border-brand-blue/5 overflow-hidden">
+        <section className="py-12 bg-white/50 backdrop-blur-sm border-y border-brand-blue/5 overflow-hidden relative z-10">
             <div className="container-max px-4">
                 <p className="text-center text-xs font-bold text-muted-foreground uppercase tracking-[0.3em] mb-10">
                     Our Trusted Hospital Partners Across India

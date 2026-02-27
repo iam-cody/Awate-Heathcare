@@ -13,7 +13,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-white selection:bg-brand-blue selection:text-white">
+    <main className="min-h-screen bg-background selection:bg-brand-blue selection:text-white relative z-0">
       <Navbar />
       <HeroSection />
       <PartnersSection />

@@ -24,7 +24,7 @@ const pricingData = [
 
 const PricingSection = () => {
     return (
-        <section className="section-padding bg-white relative overflow-hidden">
+        <section className="section-padding relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-[40%] h-[100%] bg-brand-light -z-10" />
 
@@ -59,7 +59,7 @@ const PricingSection = () => {
 
                     <div className="space-y-6">
                         {pricingData.map((item, i) => (
-                            <div key={i} className="glass-card p-8 rounded-[2rem] flex flex-col md:flex-row justify-between gap-8 group hover:border-brand-blue/30 transition-all duration-500">
+                            <div key={i} className="bg-white shadow-premium border border-brand-blue/5 p-8 rounded-[2rem] flex flex-col md:flex-row justify-between gap-8 group hover:border-brand-blue/30 transition-all duration-500">
                                 <div className="space-y-4">
                                     <div className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-[10px] font-bold uppercase tracking-widest rounded-full w-fit">
                                         {item.level}

@@ -29,7 +29,7 @@ const steps = [
 
 const ProcessSection = () => {
     return (
-        <section className="section-padding bg-white">
+        <section className="section-padding">
             <div className="container-max">
                 <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
                     <span className="text-brand-red font-bold text-sm uppercase tracking-[0.3em]">Patient Journey</span>
@@ -47,14 +47,14 @@ const ProcessSection = () => {
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                         {steps.map((step, i) => (
-                            <div key={i} className="relative group flex flex-col items-center text-center space-y-6">
+                            <div key={i} className="relative group bg-white shadow-premium border border-brand-blue/5 p-8 sm:p-10 rounded-[2.5rem] flex flex-col items-center text-center space-y-6 hover:-translate-y-2 transition-transform duration-500">
                                 {/* Step Number */}
-                                <div className="absolute -top-12 left-1/2 -translate-x-1/2 text-primary/5 font-display font-bold text-8xl transition-all group-hover:text-primary/10">
+                                <div className="absolute top-4 right-6 font-display font-bold text-6xl text-primary/30 group-hover:text-primary/60 transition-colors">
                                     0{i + 1}
                                 </div>
 
-                                <div className={`w-24 h-24 rounded-[2rem] ${step.color} flex items-center justify-center relative translate-y-0 group-hover:-translate-y-4 transition-all duration-500 shadow-premium border-4 border-white`}>
-                                    <step.icon className="w-10 h-10" />
+                                <div className={`w-20 h-20 rounded-[1.5rem] ${step.color} flex items-center justify-center relative shadow-sm`}>
+                                    <step.icon className="w-8 h-8" />
                                 </div>
 
                                 <div className="space-y-3 relative z-10">

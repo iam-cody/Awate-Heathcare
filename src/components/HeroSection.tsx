@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-medical.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative pt-24 md:pt-32 overflow-hidden bg-white">
+    <section id="home" className="relative pt-24 md:pt-32 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-brand-light rounded-full opacity-50 blur-3xl pointer-events-none" />
 

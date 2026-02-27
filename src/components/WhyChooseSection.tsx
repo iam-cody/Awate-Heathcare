@@ -30,7 +30,7 @@ const reasons = [
 
 const WhyChooseSection = () => {
     return (
-        <section className="section-padding bg-white overflow-hidden">
+        <section className="section-padding overflow-hidden">
             <div className="container-max">
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                     <div className="space-y-6">
@@ -69,7 +69,7 @@ const WhyChooseSection = () => {
 
                     <div className="grid gap-6">
                         {reasons.map((item, i) => (
-                            <div key={i} className="group p-8 rounded-3xl bg-brand-light hover:bg-white border border-transparent hover:border-brand-blue/10 hover:shadow-premium transition-all duration-500 flex gap-6">
+                            <div key={i} className="group p-8 rounded-3xl bg-white shadow-premium border border-brand-blue/5 hover:-translate-y-1 hover:border-brand-blue/20 transition-all duration-500 flex gap-6">
                                 <div className="w-14 h-14 rounded-2xl bg-white shadow-card flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
                                     <item.icon className="w-7 h-7" />
                                 </div>

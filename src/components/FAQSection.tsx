@@ -31,7 +31,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="section-padding bg-light relative overflow-hidden">
+    <section id="faq" className="section-padding relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-32 h-32 bg-brand-blue/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 

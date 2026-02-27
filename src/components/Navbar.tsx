@@ -3,11 +3,11 @@ import { Menu, X, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Treatments", href: "#treatments" },
-  { label: "Our Process", href: "#process" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Treatments", href: "/#treatments" },
+  { label: "Our Process", href: "/#process" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 const Navbar = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container-max flex items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#home" className="flex items-center transition-transform hover:scale-105">
+        <a href="/" className="flex items-center transition-transform hover:scale-105">
           <img
             src="/logo.png"
             alt="Awate Healthcare Logo"

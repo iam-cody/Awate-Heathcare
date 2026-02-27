@@ -12,7 +12,7 @@ const highlights = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-light relative overflow-hidden">
+    <section id="about" className="section-padding relative overflow-hidden">
       {/* Decorative Blur */}
       <div className="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
 

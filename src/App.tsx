@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import TreatmentDetail from "./pages/TreatmentDetail";
 
 import { useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
@@ -26,8 +27,10 @@ const App = () => {
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Index />} />
+                <Route path="/:treatmentId" element={<TreatmentDetail />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
+
             </BrowserRouter>
           </div>
         </div>
