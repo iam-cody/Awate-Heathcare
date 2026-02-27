@@ -91,7 +91,7 @@ const Specialties = () => {
             <Navbar />
 
             {/* Premium Hero Banner */}
-            <div className="relative pt-40 pb-16 md:pt-48 md:pb-20 overflow-hidden w-full">
+            <div className="relative pt-32 pb-10 md:pt-36 md:pb-12 overflow-hidden w-full">
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0 w-full h-full">
                     <img
@@ -103,20 +103,20 @@ const Specialties = () => {
                 </div>
 
                 <div className="container-max relative z-10 flex flex-col items-center justify-center text-center px-4">
-                    <div className="inline-block bg-brand-red/10 border border-brand-red/20 px-5 py-2 rounded-full mb-6">
+                    <div className="inline-block bg-brand-red/10 border border-brand-red/20 px-5 py-1.5 rounded-full mb-4">
                         <span className="text-white font-bold text-xs md:text-sm tracking-widest uppercase">Comprehensive Healthcare</span>
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-bold font-display text-white tracking-tight mb-4">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white tracking-tight mb-3">
                         All Medical Specialties
                     </h1>
 
-                    <p className="text-white/80 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
+                    <p className="text-white/80 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-6 leading-relaxed">
                         Explore our wide range of tailored medical treatments, holistic wellness packages, and alternative therapies provided by globally recognized experts.
                     </p>
 
-                    <div className="flex bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full items-center gap-4 shadow-2xl hover:bg-white/20 transition-colors cursor-pointer group">
-                        <div className="bg-brand-red p-2.5 rounded-full group-hover:scale-110 transition-transform">
+                    <div className="flex bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2.5 rounded-full items-center gap-4 shadow-2xl hover:bg-white/20 transition-colors cursor-pointer group">
+                        <div className="bg-brand-red p-2 rounded-full group-hover:scale-110 transition-transform">
                             <Phone className="w-5 h-5 text-white" />
                         </div>
                         <span className="text-white font-bold text-sm md:text-base tracking-widest whitespace-nowrap">24/7 HELPLINE: +91 98765 43210</span>
@@ -124,7 +124,7 @@ const Specialties = () => {
                 </div>
             </div>
 
-            <div className="container-max pt-16 pb-24 space-y-20 relative px-4 md:px-0">
+            <div className="container-max pt-12 pb-24 space-y-16 relative px-4 md:px-0">
                 {/* Specialities Section */}
                 <section className="relative">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5">
