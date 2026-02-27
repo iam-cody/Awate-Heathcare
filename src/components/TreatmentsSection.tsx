@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const specialties = [
     {
@@ -44,7 +45,7 @@ const TreatmentsSection = () => {
     return (
         <section id="treatments" className="section-padding">
             <div className="container-max">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8 lg:gap-12">
                     <div className="space-y-2 max-w-2xl">
                         <span className="text-brand-red font-bold text-base md:text-lg uppercase tracking-[0.2em] block mb-3">Specialized Care</span>
                         <h2 className="text-5xl md:text-6xl font-bold text-primary font-display leading-[1.1] tracking-tight">
@@ -55,9 +56,23 @@ const TreatmentsSection = () => {
                             uses cutting-edge technology and global treatment protocols.
                         </p>
                     </div>
-                    <Button size="lg" variant="outline" className="border-brand-blue text-brand-blue font-bold px-8 h-14 group">
-                        View All Specialties <ArrowUpRight className="w-5 h-5 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </Button>
+
+                    {/* Premium Stats Blocks */}
+                    <div className="flex flex-row gap-4 md:gap-6 justify-start md:justify-end flex-wrap">
+                        <div className="bg-white rounded-3xl p-6 shadow-xl shadow-brand-blue/5 border border-slate-100/60 flex flex-col justify-center min-w-[140px] md:min-w-[160px] transform hover:-translate-y-1 transition-transform">
+                            <span className="text-3xl lg:text-4xl font-display font-bold text-primary tracking-tight">
+                                30<span className="text-brand-red">+</span>
+                            </span>
+                            <span className="text-sm text-muted-foreground font-medium mt-2 leading-tight uppercase tracking-wider text-[10px] lg:text-xs">Medical<br />Specialties</span>
+                        </div>
+                        <div className="bg-brand-blue rounded-3xl p-6 shadow-xl shadow-brand-blue/20 flex flex-col justify-center min-w-[140px] md:min-w-[160px] transform hover:-translate-y-1 transition-transform relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full blur-xl -translate-y-1/2 translate-x-1/2"></div>
+                            <span className="text-3xl lg:text-4xl font-display font-bold text-white tracking-tight relative z-10">
+                                50<span className="text-brand-red font-light">+</span>
+                            </span>
+                            <span className="text-sm text-white/80 font-medium mt-2 leading-tight uppercase tracking-wider text-[10px] lg:text-xs relative z-10">Accredited<br />Hospitals</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -84,6 +99,14 @@ const TreatmentsSection = () => {
                             </div>
                         </a>
                     ))}
+                </div>
+
+                <div className="mt-14 flex justify-center w-full">
+                    <Link to="/specialties">
+                        <Button size="lg" className="bg-brand-blue hover:bg-brand-blue/90 text-white font-bold px-10 h-16 text-lg rounded-full shadow-premium group transition-all duration-300">
+                            View All Specialties <ArrowUpRight className="w-6 h-6 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </section>

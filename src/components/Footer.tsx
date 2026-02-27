@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,11 +9,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img
-                src="/logo.png"
-                alt="Awate Healthcare Logo"
-                className="h-10 w-auto object-contain invert"
-              />
+              <Link to="/">
+                <img
+                  src="/logo.png"
+                  alt="Awate Healthcare Logo"
+                  className="h-10 w-auto object-contain invert"
+                />
+              </Link>
             </div>
             <p className="text-sm text-primary-foreground/70 leading-relaxed">
               India's trusted healthcare guidance platform connecting patients with the best hospitals and specialists.
@@ -89,9 +92,9 @@ const Footer = () => {
             © {new Date().getFullYear()} Awate Healthcare Solutions. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm font-bold text-primary-foreground/40 hover:text-primary-foreground/60">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+            <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

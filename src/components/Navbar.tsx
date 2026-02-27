@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ContactModal } from "@/components/ContactModal";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -59,9 +60,11 @@ const Navbar = () => {
             </div>
             +91 98765 43210
           </a>
-          <Button className="bg-accent text-accent-foreground hover:bg-brand-red-dark font-bold px-6 shadow-premium transition-all hover:scale-105">
-            Book Free Consultation
-          </Button>
+          <ContactModal>
+            <Button className="bg-accent text-accent-foreground hover:bg-brand-red-dark font-bold px-6 shadow-premium transition-all hover:scale-105">
+              Book Free Consultation
+            </Button>
+          </ContactModal>
         </div>
 
         {/* Mobile toggle */}
@@ -89,9 +92,11 @@ const Navbar = () => {
             ))}
           </nav>
           <div className="pt-6 border-t border-brand-blue/5 space-y-4">
-            <Button className="w-full bg-accent text-white h-14 text-lg font-bold rounded-xl shadow-premium">
-              Book Free Consultation
-            </Button>
+            <ContactModal>
+              <Button className="w-full bg-accent text-white h-14 text-lg font-bold rounded-xl shadow-premium">
+                Book Free Consultation
+              </Button>
+            </ContactModal>
             <div className="flex items-center justify-center gap-2 text-primary font-bold">
               <Phone className="w-5 h-5 text-brand-green" />
               +91 98765 43210

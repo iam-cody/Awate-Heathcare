@@ -11,6 +11,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Activity, Beaker, Bone, Brain, Baby, Droplets } from "lucide-react";
+import { ContactModal } from "@/components/ContactModal";
 
 // Mock Data for Treatments
 const treatmentsData: Record<string, any> = {
@@ -155,12 +156,268 @@ const treatmentsData: Record<string, any> = {
         faqs: [
             { q: "What are the legal requirements for a Kidney Transplant in India?", a: "India has strict organ transplant laws. Only related living donors (like siblings, parents, children, or spouse) are permitted, and all legal documentation must be strictly verified by a government committee." },
             { q: "Can a donor and patient travel back together?", a: "Yes, once cleared by the surgeon. The donor usually recovers within 7-10 days, while the patient requires 3 to 4 weeks in the country." },
-            { q: "Are immunosuppressant drugs widely available?", a: "Yes, anti-rejection medications are very easily available and are highly affordable in India compared to western countries." }
+        ]
+    },
+    "diabetology": {
+        title: "Diabetology & Metabolic Care",
+        contentImg: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200",
+        overview: "Expert management and reversal programs for diabetes and allied metabolic disorders. Our partnered centers provide holistic care involving nutritionists, endocrinologists, and advanced continuous glucose monitoring.",
+        diseases: ["Type 1 Diabetes", "Type 2 Diabetes", "Gestational Diabetes", "Diabetic Neuropathy", "Diabetic Retinopathy", "Metabolic Syndrome"],
+        symptoms: ["Increased thirst and urination", "Unexplained weight loss", "Fatigue", "Blurred vision", "Slow-healing sores"],
+        procedures: [
+            { name: "Comprehensive Diabetic Screening", range: "₹4,150 - ₹12,450", days: "1 Day" },
+            { name: "Insulin Pump Initiation", range: "₹83,000 - ₹2,49,000", days: "3 Days" },
+            { name: "Advanced Continuous Glucose Monitoring", range: "₹24,900 - ₹41,500", days: "1 Day" }
+        ],
+        faqs: [
+            { q: "Can Type 2 Diabetes be reversed?", a: "In many cases, Type 2 diabetes can be put into remission or significantly managed through rigorous lifestyle, diet, and weight management programs under expert guidance." },
+            { q: "What tests are included in the screening?", a: "Screening includes HbA1c, fasting glucose, lipid profile, kidney function tests, and eye/foot examinations." }
+        ]
+    },
+    "dentistry": {
+        title: "Advanced Dentistry & Oral Surgery",
+        contentImg: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1200",
+        overview: "World-class dental clinics offering everything from routine cleanings to complex maxillofacial surgeries and full-mouth rehabilitations using advanced CAD/CAM technology.",
+        diseases: ["Tooth Decay", "Periodontal Disease", "Impacted Wisdom Teeth", "Oral Cancer", "Malocclusion", "TMJ Disorders"],
+        symptoms: ["Toothache or sensitivity", "Bleeding gums", "Jaw pain", "Difficulty chewing", "Missing teeth"],
+        procedures: [
+            { name: "Dental Implant (Single)", range: "₹24,900 - ₹49,800", days: "1-2 Days" },
+            { name: "Full Mouth Rehabilitation", range: "₹2,49,000 - ₹5,81,000", days: "10-14 Days" },
+            { name: "Root Canal Treatment", range: "₹4,150 - ₹12,450", days: "1 Day" },
+            { name: "Maxillofacial Surgery", range: "₹83,000 - ₹3,32,000", days: "5 Days" },
+            { name: "Smile Designing / Veneers", range: "₹41,500 - ₹1,66,000", days: "3-5 Days" }
+        ],
+        faqs: [
+            { q: "How long does a dental implant procedure take?", a: "The surgical placement takes a few hours, but the complete process involving the crown attachment requires 3-6 months for the bone to heal." },
+            { q: "Are the materials internationally certified?", a: "Yes, our partner clinics use globally renowned brands (like Nobel Biocare, Straumann) for implants and materials." }
+        ]
+    },
+    "gynaecology": {
+        title: "Gynaecology & Obstetrics",
+        contentImg: "https://images.unsplash.com/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&q=80&w=1200",
+        overview: "Comprehensive women's healthcare providing advanced minimally invasive surgeries, high-risk pregnancy management, and gynecological oncology services.",
+        diseases: ["Endometriosis", "Uterine Fibroids", "PCOS", "Pelvic Organ Prolapse", "Cervical/Ovarian Cancer", "High-Risk Pregnancy"],
+        symptoms: ["Irregular or heavy bleeding", "Pelvic pain", "Pain during intercourse", "Unusual discharge", "Infertility issues"],
+        procedures: [
+            { name: "Laparoscopic Hysterectomy", range: "₹1,24,500 - ₹2,07,500", days: "3-4 Days" },
+            { name: "Myomectomy (Fibroid Removal)", range: "₹1,07,900 - ₹1,82,600", days: "3 Days" },
+            { name: "Ovarian Cystectomy", range: "₹83,000 - ₹1,49,400", days: "2 Days" },
+            { name: "Robotic Gynaecologic Surgery", range: "₹2,49,000 - ₹4,15,000", days: "4 Days" }
+        ],
+        faqs: [
+            { q: "What is the advantage of laparoscopic surgery?", a: "Laparoscopic (minimally invasive) surgery results in smaller incisions, less pain, shorter hospital stays, and faster recovery." },
+            { q: "Is robotic surgery safe for fibroids?", a: "Yes, robotic surgery offers unparalleled precision, making it an excellent and safe choice for complex fibroid removals." }
+        ]
+    },
+    "urology": {
+        title: "Urology & Male Health",
+        contentImg: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&q=80&w=1200",
+        overview: "Expertise in addressing conditions of the male and female urinary tract, as well as the male reproductive system using advanced laser and robotic techniques.",
+        diseases: ["Kidney/Bladder Stones", "Enlarged Prostate (BPH)", "Prostate Cancer", "Urinary Incontinence", "Erectile Dysfunction"],
+        symptoms: ["Pain or burning during urination", "Frequent urge to urinate", "Blood in urine", "Lower abdominal or back pain", "Difficulty starting urination"],
+        procedures: [
+            { name: "Laser Prostate Surgery (HoLEP)", range: "₹1,24,500 - ₹2,07,500", days: "2-3 Days" },
+            { name: "Robotic Radical Prostatectomy", range: "₹4,15,000 - ₹6,64,000", days: "5-7 Days" },
+            { name: "Ureteroscopy / Lithotripsy", range: "₹66,400 - ₹1,24,500", days: "1-2 Days" },
+            { name: "Penile Implant Surgery", range: "₹4,15,000 - ₹8,30,000", days: "3 Days" }
+        ],
+        faqs: [
+            { q: "Is laser prostate surgery better than traditional TURP?", a: "Laser surgeries like HoLEP offer significantly less bleeding, allowing for faster recovery and usually require only an overnight hospital stay." },
+            { q: "Are kidney stones always treated with surgery?", a: "No, small stones may pass naturally or be treated with medication or non-invasive shock wave therapy (ESWL)." }
+        ]
+    },
+    "ent": {
+        title: "ENT (Ear, Nose & Throat)",
+        contentImg: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200",
+        overview: "Specialized care for disorders of the head, neck, ear, nose, and throat, including advanced cochlear implants, sinus surgeries, and vocal cord procedures.",
+        diseases: ["Hearing Loss", "Chronic Sinusitis", "Tonsillitis", "Sleep Apnea", "Vocal Cord Nodules", "Head and Neck Tumors"],
+        symptoms: ["Chronic earaches or fluid discharge", "Persistent nasal congestion", "Snoring or breathing pauses during sleep", "Hoarseness", "Difficulty swallowing"],
+        procedures: [
+            { name: "Cochlear Implant Surgery", range: "₹6,64,000 - ₹12,45,000", days: "3-5 Days" },
+            { name: "FESS (Endoscopic Sinus Surgery)", range: "₹83,000 - ₹1,49,400", days: "1-2 Days" },
+            { name: "Tonsillectomy / Adenoidectomy", range: "₹49,800 - ₹83,000", days: "1 Day" },
+            { name: "Sleep Apnea Surgery", range: "₹1,24,500 - ₹2,49,000", days: "2-3 Days" },
+            { name: "Thyroidectomy", range: "₹1,07,900 - ₹1,82,600", days: "3 Days" }
+        ],
+        faqs: [
+            { q: "What is the success rate of cochlear implants?", a: "Cochlear implants have a very high success rate in restoring functional hearing, especially for profound sensorineural hearing loss, followed by focused speech therapy." },
+            { q: "Will I have visible scars after sinus surgery?", a: "No, FESS is performed entirely through the nostrils using endoscopes, resulting in no external scarring." }
+        ]
+    },
+    "pulmonology": {
+        title: "Pulmonology & Respiratory Care",
+        contentImg: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1200",
+        overview: "Comprehensive diagnostic and therapeutic services for acute and chronic respiratory and lung conditions, utilizing state-of-the-art diagnostic imaging and bronchoscopy.",
+        diseases: ["Asthma", "COPD", "Lung Cancer", "Pulmonary Fibrosis", "Tuberculosis", "Pneumonia", "Sleep Apnea"],
+        symptoms: ["Chronic cough", "Shortness of breath", "Wheezing", "Chest tightness", "Coughing up blood"],
+        procedures: [
+            { name: "Bronchoscopy", range: "₹24,900 - ₹41,500", days: "1 Day" },
+            { name: "Thoracoscopy / VATS", range: "₹1,49,400 - ₹2,49,000", days: "3-5 Days" },
+            { name: "Lung Biopsy", range: "₹41,500 - ₹83,000", days: "1-2 Days" },
+            { name: "Lung Volume Reduction Surgery", range: "₹2,49,000 - ₹4,15,000", days: "5-7 Days" }
+        ],
+        faqs: [
+            { q: "Is bronchoscopy painful?", a: "No, bronchoscopy is usually performed under conscious sedation or general anesthesia, making it a painless procedure." },
+            { q: "How is COPD managed?", a: "COPD is managed through bronchodilators, inhaled corticosteroids, oxygen therapy, pulmonary rehabilitation, and smoking cessation programs." }
+        ]
+    },
+    "ophthalmology": {
+        title: "Ophthalmology & Eye Care",
+        contentImg: "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?auto=format&fit=crop&q=80&w=1200",
+        overview: "Advanced vision correction therapies, micro-incisional surgeries, and comprehensive treatments for all complex ocular conditions ensuring the highest standards of eye care.",
+        diseases: ["Cataracts", "Glaucoma", "Macular Degeneration", "Diabetic Retinopathy", "Corneal Disorders", "Refractive Errors"],
+        symptoms: ["Blurry or double vision", "Halos around lights", "Loss of peripheral vision", "Eye pain or redness", "Floaters or flashes of light"],
+        procedures: [
+            { name: "Cataract Surgery (Phaco)", range: "₹33,200 - ₹83,000", days: "1 Day" },
+            { name: "LASIK / SMILE Surgery", range: "₹49,800 - ₹1,07,900", days: "1 Day" },
+            { name: "Corneal Transplant", range: "₹1,24,500 - ₹2,07,500", days: "2-3 Days" },
+            { name: "Retinal Detachment Surgery", range: "₹83,000 - ₹1,66,000", days: "1-2 Days" },
+            { name: "Glaucoma Surgery", range: "₹49,800 - ₹1,07,900", days: "1-2 Days" }
+        ],
+        faqs: [
+            { q: "How quickly will my vision improve after cataract surgery?", a: "Most patients notice a significant improvement in vision within 24 to 48 hours after the procedure." },
+            { q: "Is LASIK permanent?", a: "Yes, LASIK permanently reshapes the cornea. However, natural age-related changes (presbyopia) can still occur later in life." }
+        ]
+    },
+    "general-surgery": {
+        title: "General & Laparoscopic Surgery",
+        contentImg: "https://images.unsplash.com/photo-1551076805-e1869043e560?auto=format&fit=crop&q=80&w=1200",
+        overview: "Expertise in specialized surgical management of the abdomen, digestive tract, endocrine system, and breast, utilizing minimally invasive laparoscopic tools.",
+        diseases: ["Hernia", "Gallstones", "Appendicitis", "Thyroid Disorders", "Breast Tumors", "Hemorrhoids / Fissures"],
+        symptoms: ["Severe abdominal pain", "Unexplained swelling or lumps", "Difficulty swallowing", "Chronic digestive issues"],
+        procedures: [
+            { name: "Laparoscopic Gallbladder Removal", range: "₹66,400 - ₹1,24,500", days: "1-2 Days" },
+            { name: "Laparoscopic Hernia Repair", range: "₹83,000 - ₹1,49,400", days: "1-2 Days" },
+            { name: "Appendectomy", range: "₹49,800 - ₹99,600", days: "1-2 Days" },
+            { name: "Laser Surgery for Piles/Fistula", range: "₹41,500 - ₹83,000", days: "1 Day" },
+            { name: "Breast Lumpectomy", range: "₹83,000 - ₹1,49,400", days: "2 Days" }
+        ],
+        faqs: [
+            { q: "What is laparoscopic surgery?", a: "Also known as keyhole surgery, it relies on small incisions and a camera, reducing blood loss, pain, and recovery time compared to open surgery." },
+            { q: "How soon can I walk after a hernia operation?", a: "Most patients are encouraged to walk on the same day or the day following laparoscopic hernia surgery." }
+        ]
+    },
+    "psychiatry": {
+        title: "Psychiatry & Mental Health",
+        contentImg: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200",
+        overview: "Compassionate, confidential, and comprehensive psychiatric diagnosis, medication management, and specialized therapeutic counseling for mental wellness.",
+        diseases: ["Clinical Depression", "Anxiety Disorders", "Bipolar Disorder", "Schizophrenia", "PTSD", "Substance Abuse"],
+        symptoms: ["Persistent sadness", "Extreme mood swings", "Hallucinations", "Severe insomnia", "Social withdrawal/isolation"],
+        procedures: [
+            { name: "Comprehensive Psychiatric Evaluation", range: "₹4,150 - ₹12,450", days: "1 Day" },
+            { name: "In-patient Rehab & Care (Per Month)", range: "₹83,000 - ₹2,49,000", days: "30 Days" },
+            { name: "Cognitive Behavioral Therapy Session", range: "₹2,075 - ₹4,980", days: "1 Day" },
+            { name: "Transcranial Magnetic Stimulation (TMS)", range: "₹83,000 - ₹1,66,000", days: "Course" }
+        ],
+        faqs: [
+            { q: "Are consultations strictly confidential?", a: "Absolutely. We adhere to the strictest medical confidentiality policies globally. Your data is never shared without your explicit consent." },
+            { q: "How effective is TMS for depression?", a: "TMS is an highly effective, non-invasive treatment for patients who have not responded well to traditional antidepressant medications." }
+        ]
+    },
+    "endocrinology": {
+        title: "Endocrinology & Hormone Care",
+        contentImg: "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&q=80&w=1200",
+        overview: "Advanced management of diseases related to glands and hormones, offering cutting-edge diagnostics and personalized treatment regimens.",
+        diseases: ["Thyroid Disorders", "PCOS", "Osteoporosis", "Adrenal Gland Disorders", "Pituitary Tumors"],
+        symptoms: ["Unexplained weight changes", "Extreme fatigue", "Excessive hair growth or loss", "Bone fractures", "Irregular periods"],
+        procedures: [
+            { name: "Complete Endocrine Panel", range: "₹8,300 - ₹20,750", days: "1 Day" },
+            { name: "Radioiodine Therapy (for Hyperthyroidism)", range: "₹33,200 - ₹66,400", days: "1-2 Days" },
+            { name: "Thyroid Nodule Ablation", range: "₹83,000 - ₹1,49,400", days: "1 Day" }
+        ],
+        faqs: [
+            { q: "What is an endocrinologist?", a: "A doctor who specializes in diagnosing and treating conditions caused by hormone imbalances or gland problems." },
+            { q: "How is PCOS treated?", a: "PCOS is typically managed through a combination of lifestyle changes, hormone therapy, and medications to regulate insulin." }
+        ]
+    },
+    "bariatric-surgery": {
+        title: "Bariatric & Weight Loss Surgery",
+        contentImg: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1200",
+        overview: "Life-changing surgical procedures designed to induce significant weight loss and resolve severe obesity-related conditions like type 2 diabetes and hypertension.",
+        diseases: ["Severe Obesity", "Metabolic Syndrome", "Obesity-induced Sleep Apnea", "Type 2 Diabetes associated with Obesity"],
+        symptoms: ["BMI over 35/40", "Joint pain due to weight", "Chronic fatigue", "Unsuccessful long-term weight loss via diet/exercise"],
+        procedures: [
+            { name: "Laparoscopic Gastric Bypass", range: "₹3,32,000 - ₹4,98,000", days: "3-4 Days" },
+            { name: "Laparoscopic Sleeve Gastrectomy", range: "₹2,49,000 - ₹4,15,000", days: "3 Days" },
+            { name: "Intragastric Balloon Placement", range: "₹1,49,400 - ₹2,49,000", days: "1-2 Days" },
+            { name: "Gastric Banding", range: "₹2,49,000 - ₹3,73,500", days: "3 Days" }
+        ],
+        faqs: [
+            { q: "How much weight can I expect to lose?", a: "Most patients lose 50% to 80% of their excess body weight within 12-18 months of surgery, depending on the procedure and lifestyle changes." },
+            { q: "Will bariatric surgery cure my diabetes?", a: "In a vast majority of cases, bariatric surgeries (like Gastric Bypass) cause an immediate and long-term remission of Type 2 Diabetes." }
+        ]
+    },
+    "plastic-surgery": {
+        title: "Plastic, Reconstructive & Aesthetic Surgery",
+        contentImg: "https://images.unsplash.com/photo-1512736912-cd9f15fe2305?auto=format&fit=crop&q=80&w=1200",
+        overview: "Enhance your natural beauty and reconstruct bodily defects using highly precise, technologically advanced aesthetic and reconstructive surgical techniques.",
+        diseases: ["Burn Injuries", "Congenital Defects (e.g., Cleft Lip)", "Breast Cancer (Reconstruction)", "Trauma/Scarring", "Aesthetic Dissatisfaction"],
+        symptoms: ["Physical disfigurement", "Functional impairment due to trauma", "Breathing issues (deviated septum)", "Excess skin/fat"],
+        procedures: [
+            { name: "Rhinoplasty (Nose Job)", range: "₹83,000 - ₹2,07,500", days: "1-2 Days" },
+            { name: "Breast Augmentation/Reduction", range: "₹1,24,500 - ₹2,49,000", days: "1-2 Days" },
+            { name: "Liposuction / Body Contouring", range: "₹83,000 - ₹2,49,000", days: "1-2 Days" },
+            { name: "Facelift (Rhytidectomy)", range: "₹1,49,400 - ₹3,32,000", days: "1-2 Days" },
+            { name: "Hair Transplant (FUE)", range: "₹49,800 - ₹1,24,500", days: "1 Day" }
+        ],
+        faqs: [
+            { q: "Is plastic surgery safe in India?", a: "Yes, our partner surgeons are board-certified and internationally trained, operating in JCI-accredited facilities with state-of-the-art sterile protocols." },
+            { q: "How long does bruising last after a facelift?", a: "Most swelling and bruising peak at 2-3 days and gradually resolve over 10 to 14 days." }
+        ]
+    },
+    "transplant": {
+        title: "Organ Transplant Services",
+        contentImg: "https://images.unsplash.com/photo-1519494080410-f9aa76cb4283?auto=format&fit=crop&q=80&w=1200",
+        overview: "India's highest success rate programs for Liver, Heart, Bone Marrow, and Kidney transplants with world-class post-operative care and immunosuppression management.",
+        diseases: ["End-Stage Liver Disease (Cirrhosis)", "Heart Failure", "Leukemia/Lymphoma (BMT)", "End-Stage Renal Disease", "Severe Lung Disease"],
+        symptoms: ["Severe jaundice", "Extreme breathlessness", "Complete organ failure indicators", "Unresponsive to typical medications"],
+        procedures: [
+            { name: "Liver Transplant", range: "₹18,26,000 - ₹24,90,000", days: "21-30 Days" },
+            { name: "Bone Marrow Transplant (Allogeneic)", range: "₹16,60,000 - ₹29,05,000", days: "40-60 Days" },
+            { name: "Heart Transplant", range: "₹20,75,000 - ₹33,20,000", days: "25-35 Days" },
+            { name: "Kidney Transplant", range: "₹9,96,000 - ₹14,94,000", days: "21-30 Days" }
+        ],
+        faqs: [
+            { q: "Do you arrange the organ donor?", a: "No. By law, living donors must be close family relatives. Cadaver (deceased) organ waiting lists are primarily for Indian citizens. You must bring a compatible family donor." },
+            { q: "What is the legality for foreign patients?", a: "Foreign patients and their donors require clearance from the Authorization Committee. We help facilitate all embassy interactions and legal paperwork." }
+        ]
+    },
+    "paediatric": {
+        title: "Paediatrics & Neonatology",
+        contentImg: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&q=80&w=1200",
+        overview: "Compassionate, specialized care for infants, children, and adolescents, featuring advanced NICUs and pediatric intensive care units.",
+        diseases: ["Congenital Heart Defects", "Pediatric Cancer", "Cerebral Palsy", "Genetic Disorders", "Neonatal Complications"],
+        symptoms: ["Failure to thrive", "Developmental delays", "Chronic pediatric infections", "Visible physical anomalies at birth"],
+        procedures: [
+            { name: "Pediatric Cardiac Surgery", range: "₹3,32,000 - ₹6,64,000", days: "10-14 Days" },
+            { name: "Cochlear Implant (Child)", range: "₹7,47,000 - ₹13,28,000", days: "3-5 Days" },
+            { name: "NICU Care (Per Day)", range: "₹16,600 - ₹33,200", days: "Varies" },
+            { name: "Pediatric Orthopedic Correction", range: "₹1,24,500 - ₹3,32,000", days: "3-5 Days" }
+        ],
+        faqs: [
+            { q: "Can parents stay with the child in the hospital?", a: "Yes, premium private rooms are designed to accommodate at least one parent comfortably alongside the child during their stay." },
+            { q: "Are pediatric surgeons different from general surgeons?", a: "Absolutely. Pediatric surgeons undergo specialized years of training focusing specifically on the delicate surgical needs of growing children." }
+        ]
+    },
+    "gastroenterology": {
+        title: "Gastroenterology & Hepatology",
+        contentImg: "https://images.unsplash.com/photo-1584516150909-c43483ee7932?auto=format&fit=crop&q=80&w=1200",
+        overview: "Expert diagnosis and advanced endoscopic treatments for digestive tract, liver, and pancreatic disorders, emphasizing minimally invasive solutions.",
+        diseases: ["Gastric Ulcers", "Hepatitis B/C", "Crohn's Disease", "Ulcerative Colitis", "Liver Cirrhosis", "Pancreatitis", "Gallstones"],
+        symptoms: ["Chronic stomach pain", "Severe acid reflux or heartburn", "Blood in stool", "Jaundice (yellowing of skin)", "Unexplained digestive issues"],
+        procedures: [
+            { name: "Diagnostic Endoscopy/Colonoscopy", range: "₹8,300 - ₹20,750", days: "1 Day" },
+            { name: "ERCP (Bile Duct Stone Removal)", range: "₹49,800 - ₹99,600", days: "1-2 Days" },
+            { name: "Laparoscopic Cholecystectomy", range: "₹66,400 - ₹1,24,500", days: "1-2 Days" },
+            { name: "Hepatitis Treatment Plan", range: "₹41,500 - ₹1,66,000", days: "Outpatient" },
+            { name: "Bowel Resection Surgery", range: "₹1,66,000 - ₹3,32,000", days: "4-6 Days" }
+        ],
+        faqs: [
+            { q: "Is a colonoscopy painful?", a: "A colonoscopy is performed under sedation or light anesthesia, making the procedure highly comfortable and painless." },
+            { q: "What causes liver cirrhosis?", a: "Cirrhosis commonly results from chronic alcohol abuse, chronic viral hepatitis (B or C), or non-alcoholic fatty liver disease (NAFLD)." }
         ]
     }
 };
-
-const defaultTreatment = treatmentsData.cardiology;
 
 const sidebarMenus = [
     { name: "Cardiology", path: "/cardiology" },
@@ -176,8 +433,29 @@ const sidebarMenus = [
 const TreatmentDetail = () => {
     const { treatmentId } = useParams();
 
-    // Use specific data if exists, otherwise fallback to default (Cardiology) for now
-    const data = treatmentsData[treatmentId as string] || { ...defaultTreatment, title: treatmentId ? treatmentId.charAt(0).toUpperCase() + treatmentId.slice(1).replace('-', ' ') : "Treatment" };
+    const formattedTitle = treatmentId
+        ? treatmentId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+        : "Treatment";
+
+    const genericTreatment = {
+        title: formattedTitle,
+        contentImg: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200",
+        overview: `Comprehensive care and advanced treatment options for ${formattedTitle}. Our network of top hospitals provides world-class specialists and cutting-edge technology for international patients.`,
+        diseases: ["General conditions", "Advanced complications", "Specialized cases", "Preventive care"],
+        symptoms: ["Variable symptoms", "Consult with a specialist for detailed symptoms"],
+        procedures: [
+            { name: "Consultation & Diagnostics", range: "₹4,150 - ₹12,450", days: "1 Day" },
+            { name: "Standard Procedure", range: "₹83,000 - ₹2,49,000", days: "3 Days" },
+            { name: "Advanced Treatment", range: "₹2,49,000 - ₹4,98,000", days: "7 Days" }
+        ],
+        faqs: [
+            { q: "How long does the treatment typically take?", a: "The duration depends on the specific condition and treatment plan recommended by our specialists." },
+            { q: "Do you provide tele-consultation before travel?", a: "Yes, we always arrange secure video consultations with the senior doctor before you travel to India." },
+            { q: "Is the cost covered by my medical insurance?", a: "Many treatments are handled by international insurances. We can assist you with all necessary documentation." }
+        ]
+    };
+
+    const data = treatmentsData[treatmentId as string] || genericTreatment;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -195,7 +473,7 @@ const TreatmentDetail = () => {
                     <div className="lg:w-[75%] space-y-10">
                         {/* Content Header Image */}
                         <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-premium">
-                            <img src={data.contentImg || defaultTreatment.contentImg} alt="Treatment Overview" className="w-full h-full object-cover" />
+                            <img src={data.contentImg} alt="Treatment Overview" className="w-full h-full object-cover" />
                         </div>
 
                         {/* Overview Section */}
@@ -259,9 +537,11 @@ const TreatmentDetail = () => {
                                             </div>
                                         </div>
 
-                                        <button className="w-full mt-6 bg-primary text-white font-bold py-3 rounded-xl text-sm hover:bg-brand-blue transition-colors shadow-md">
-                                            Book Now
-                                        </button>
+                                        <ContactModal triggerClassName="w-full mt-6">
+                                            <button className="w-full bg-primary text-white font-bold py-3 rounded-xl text-sm hover:bg-brand-blue transition-colors shadow-md">
+                                                Book Now
+                                            </button>
+                                        </ContactModal>
                                     </div>
                                 ))}
                             </div>
@@ -272,9 +552,11 @@ const TreatmentDetail = () => {
                         </div>
 
                         {/* Huge CTA */}
-                        <button className="w-full bg-brand-red text-white hover:bg-red-600 transition-colors py-5 rounded-2xl font-bold text-lg shadow-xl shadow-brand-red/20 active:scale-[0.98]">
-                            Get Free Quotes
-                        </button>
+                        <ContactModal triggerClassName="w-full">
+                            <button className="w-full bg-brand-red text-white hover:bg-red-600 transition-colors py-5 rounded-2xl font-bold text-lg shadow-xl shadow-brand-red/20 active:scale-[0.98]">
+                                Get Free Quotes
+                            </button>
+                        </ContactModal>
 
                         {/* FAQs Accordion */}
                         <div className="space-y-6 pt-10 border-t border-slate-100">
@@ -324,9 +606,11 @@ const TreatmentDetail = () => {
                                 <div className="absolute inset-0 bg-brand-blue/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
                                 <h5 className="font-display font-bold text-xl mb-2 relative z-10">Need Assistance?</h5>
                                 <p className="text-white/80 text-sm mb-6 relative z-10">Our doctors and coordinators are available 24/7 to guide you.</p>
-                                <button className="bg-white text-primary w-full py-3 rounded-xl font-bold text-sm hover:bg-slate-100 transition-colors relative z-10">
-                                    Contact Us Now
-                                </button>
+                                <ContactModal triggerClassName="w-full relative z-10">
+                                    <button className="bg-white text-primary w-full py-3 rounded-xl font-bold text-sm hover:bg-slate-100 transition-colors">
+                                        Contact Us Now
+                                    </button>
+                                </ContactModal>
                             </div>
                         </div>
                     </div>
