@@ -40,7 +40,7 @@ const wellnessList = [
 const alternativeList = [
     { name: "Yoga", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600", link: "/yoga" },
     { name: "Ayurveda", img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=600", link: "/ayurveda" },
-    { name: "Accupressure", img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=600", link: "/accupressure" },
+    { name: "Acupressure", img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=600", link: "/acupressure" },
     { name: "Naturopathy", img: "https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&q=80&w=600", link: "/naturopathy" },
     { name: "Homeopathy", img: "https://images.unsplash.com/photo-1615486511484-92e172dc4ea0?auto=format&fit=crop&q=80&w=600", link: "/homeopathy" }
 ];

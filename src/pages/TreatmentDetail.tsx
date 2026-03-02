@@ -558,8 +558,8 @@ const treatmentsData: Record<string, any> = {
             { q: "How long is a typical Ayurvedic retreat?", a: "Programs usually range from 7 to 21 days depending on whether it is for simple rejuvenation or deep therapeutic cleansing like Panchakarma." }
         ]
     },
-    "accupressure": {
-        title: "Accupressure",
+    "acupressure": {
+        title: "Acupressure",
         contentImg: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=1200",
         overview: "Acupressure is a form of Traditional Chinese Medicine, which focuses on applying pressure to specific points on the body. There are about 2,000 points on the body that connect to meridians, or pathways, through which energy flows.",
         diseases: ["Stroke recovery", "Chronic Diarrhoea", "Enteritis", "Dementia care", "Skin Rashes / Allergies"],
