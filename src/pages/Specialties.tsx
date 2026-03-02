@@ -29,20 +29,20 @@ const specialitiesList = [
 ];
 
 const wellnessList = [
-    { name: "Cancer Screening Package", img: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=600" },
-    { name: "Diabetes Screening Package", img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600" },
-    { name: "Preventive Heart Package", img: "https://images.unsplash.com/photo-1505592225030-dad7a0531844?auto=format&fit=crop&q=80&w=600" },
-    { name: "Executive Health Check Up", img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600" },
-    { name: "Female Wellness Package", img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600" },
-    { name: "Male Wellness Package", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600" }
+    { name: "Cancer Screening Package", img: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=600", link: "/cancer-screening" },
+    { name: "Diabetes Screening Package", img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600", link: "/diabetes-screening" },
+    { name: "Preventive Heart Package", img: "https://images.unsplash.com/photo-1505592225030-dad7a0531844?auto=format&fit=crop&q=80&w=600", link: "/heart-package" },
+    { name: "Executive Health Check Up", img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600", link: "/executive-checkup" },
+    { name: "Female Wellness Package", img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600", link: "/female-wellness" },
+    { name: "Male Wellness Package", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600", link: "/male-wellness" }
 ];
 
 const alternativeList = [
-    { name: "Yoga", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600" },
-    { name: "Ayurveda", img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=600" },
-    { name: "Accupressure", img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=600" },
-    { name: "Naturopathy", img: "https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&q=80&w=600" },
-    { name: "Homeopathy", img: "https://images.unsplash.com/photo-1615486511484-92e172dc4ea0?auto=format&fit=crop&q=80&w=600" }
+    { name: "Yoga", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600", link: "/yoga" },
+    { name: "Ayurveda", img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=600", link: "/ayurveda" },
+    { name: "Accupressure", img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=600", link: "/accupressure" },
+    { name: "Naturopathy", img: "https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&q=80&w=600", link: "/naturopathy" },
+    { name: "Homeopathy", img: "https://images.unsplash.com/photo-1615486511484-92e172dc4ea0?auto=format&fit=crop&q=80&w=600", link: "/homeopathy" }
 ];
 
 const SpecialtyCard = ({ item }: { item: any }) => {

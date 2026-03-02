@@ -416,6 +416,177 @@ const treatmentsData: Record<string, any> = {
             { q: "Is a colonoscopy painful?", a: "A colonoscopy is performed under sedation or light anesthesia, making the procedure highly comfortable and painless." },
             { q: "What causes liver cirrhosis?", a: "Cirrhosis commonly results from chronic alcohol abuse, chronic viral hepatitis (B or C), or non-alcoholic fatty liver disease (NAFLD)." }
         ]
+    },
+    // Health Packages
+    "cancer-screening": {
+        title: "Cancer Screening Package",
+        isPackage: true,
+        contentImg: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=1200",
+        overview: "Cancer screening aims to detect cancer before symptoms appear. This may involve blood tests, urine tests, DNA tests, other tests, or medical imaging. The benefits of screening in terms of cancer prevention, early detection and subsequent treatment must be weighed against any harms.",
+        packageIncludes: [
+            { label: "Pathology Test", value: "CBC with ESR" },
+            { label: "Test for Diabetes", value: "Blood Glucose - F & PP" },
+            { label: "Urine Test", value: "Routine" },
+            { label: "Stool Test", value: "Routine" },
+            { label: "Test for Heart Diseases", value: "Lipid Profile" },
+            { label: "Test for Liver Diseases", value: "Liver Profile" }
+        ],
+        price: "₹5,000/- onwards",
+        faqs: [
+            { q: "When should I screen for Cancer?", a: "Screening is recommended based on age, family history, and risk factors. Consult our experts for a personalized timeline." },
+            { q: "How is early cancer detected?", a: "Early detection involves regular screenings like markers and imaging before any physical symptoms arise." },
+            { q: "Why is cancer screening important?", a: "Early detection significantly increases the chances of successful treatment and survival." },
+            { q: "What are 3 warnings of Cancer?", a: "Unexplained weight loss, persistent fatigue, and unusual lumps or changes in skin are common early warning signs." }
+        ]
+    },
+    "diabetes-screening": {
+        title: "Diabetes Screening Package",
+        isPackage: true,
+        contentImg: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200",
+        overview: "Diabetes is often called the 'silent killer'. This comprehensive package is designed to detect early signs of diabetes and its impact on other vital organs like the heart, liver, and kidneys.",
+        packageIncludes: [
+            { label: "Pathology Test", value: "CBC with ESR" },
+            { label: "Test For Diabetes", value: "Blood Glucose - F & PP" },
+            { label: "Urine & Stool Test", value: "Routine Analysis" },
+            { label: "Vital Organs", value: "Lipid, Liver & Kidney Profile" },
+            { label: "Cancer Markers", value: "CEA, Pap Smear, Mammography" },
+            { label: "Consultations", value: "Consult with Physician & Specialists" }
+        ],
+        price: "₹5,000/- onwards",
+        faqs: [
+            { q: "Can Type 2 Diabetes be reversed?", a: "Yes, early-stage Type 2 diabetes can often be reversed through strict lifestyle, diet, and weight management." },
+            { q: "Who should take this package?", a: "Individuals with a sedentary lifestyle, family history of diabetes, or those over age 35 should screen annually." }
+        ]
+    },
+    "heart-package": {
+        title: "Preventive Heart Package",
+        isPackage: true,
+        contentImg: "https://images.unsplash.com/photo-1505592225030-dad7a0531844?auto=format&fit=crop&q=80&w=1200",
+        overview: "Cardiovascular diseases are a leading cause of global health issues. Our Preventive Heart Package provides a deep dive into your cardiac health using advanced diagnostics and specialist reviews.",
+        packageIncludes: [
+            { label: "Pathology & Diabetes", value: "CBC, ESR, Blood Glucose" },
+            { label: "Cardiac Markers", value: "Lipid Profile, ECG, TMT" },
+            { label: "Liver & Kidney", value: "Liver & Renal Function Tests" },
+            { label: "Cancer Markers", value: "CEA, Pap Smear, PSA" },
+            { label: "Imaging", value: "X-Ray Chest, USG Abdomen" },
+            { label: "Consults", value: "Cardiologist & General Surgeon" }
+        ],
+        price: "₹15,000/- onwards",
+        faqs: [
+            { q: "What is a TMT test?", a: "A Treadmill Test (TMT) measures how your heart responds to physical stress while you walk on a treadmill." },
+            { q: "Why include cancer markers in a heart package?", a: "Our premium packages provide a holistic check to ensure all vital health indicators are monitored simultaneously." }
+        ]
+    },
+    "executive-checkup": {
+        title: "Executive Health Check Up",
+        isPackage: true,
+        contentImg: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200",
+        overview: "This package is suitable to all types of individuals. It contains examination from Head to Toe. So that any abnormalities can be picked in early stage and treated. Doctors advise to do your full body check up once a year to prevent diseases.",
+        packageIncludes: [
+            { label: "Whole Body Screen", value: "Complete Blood & Urine Analysis" },
+            { label: "Advanced Diabetes", value: "HbA1c & Fasting Glucose" },
+            { label: "Full Organ Panel", value: "Liver, Kidney, Thyroid, Lipid" },
+            { label: "Cancer Screening", value: "All Major Cancer Markers" },
+            { label: "Diagnostic Imaging", value: "USG Whole Abdomen, Chest X-ray" },
+            { label: "Super Specialist Consults", value: "Physician, ENT, Gynec/Urologist" }
+        ],
+        price: "₹10,000/- onwards",
+        faqs: [
+            { q: "I feel healthy. Why would I require a Health Check?", a: "Many conditions like hypertension and early-stage diabetes have no symptoms. Regular checks help catch these before they become severe." },
+            { q: "How long does the check-up take?", a: "An executive check-up typically takes 4 to 6 hours. Results are usually available within 24 to 48 hours." }
+        ]
+    },
+    "male-wellness": {
+        title: "Male Wellness Package",
+        isPackage: true,
+        contentImg: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=1200",
+        overview: "Specifically designed for men's health, focusing on hormonal balance, prostate health, and cardiovascular risk factors that are more prevalent in men over 40.",
+        packageIncludes: [
+            { label: "Hormone Panel", value: "Testosterone, FSH, LH Levels" },
+            { label: "Prostate Health", value: "PSA Marker & USG Pelvis" },
+            { label: "General Pathology", value: "CBC, ESR, Blood Sugar" },
+            { label: "Organ Profiles", value: "Liver, Kidney & Lipid Profile" },
+            { label: "Imaging", value: "X-Ray Chest & Diagnostic USG" },
+            { label: "Specialist Consult", value: "Physician & Urologist Review" }
+        ],
+        price: "₹8,000/- onwards",
+        faqs: [
+            { q: "When should I start prostate screening?", a: "Men over the age of 40 or those with a family history of prostate issues should screen annually." },
+            { q: "Why check testosterone levels?", a: "Testosterone affects energy, mood, and sexual health. Low levels can be managed effectively if detected early." }
+        ]
+    },
+    // Alternative Medicine
+    "yoga": {
+        title: "Yoga",
+        contentImg: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200",
+        overview: "Yoga is a mindful movement practice that encompasses stretching, strengthening poses, meditation, and breathing exercises. Yoga uses body, breath, and the senses to reconnect the participant with the universe and move emotions and thoughts into stillness. Yoga is essentially a spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body.",
+        isAlternative: true,
+        principles: [
+            { label: "Proper Exercise", value: "Āsana" },
+            { label: "Proper Breathing", value: "Prānāyāma" },
+            { label: "Proper Relaxation", value: "Śavāsana" },
+            { label: "Proper Diet", value: "Vegetarian" },
+            { label: "Positive Thinking & Meditation", value: "Vedānta & Dhyāna" }
+        ],
+        faqs: [
+            { q: "What are the benefits of daily Yoga?", a: "Yoga improves flexibility, strength, posture, and mental clarity while significantly reducing stress and anxiety." },
+            { q: "Do I need to be flexible to start Yoga?", a: "No, flexibility is a result of yoga, not a prerequisite. Everyone can start at their own level and progress gradually." }
+        ]
+    },
+    "ayurveda": {
+        title: "Ayurveda",
+        contentImg: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=1200",
+        overview: "Ayurveda, or ayurvedic medicine, is a healthy-lifestyle system that people in India have used for more than 5,000 years. Ayurveda emphasizes good health and prevention and treatment of illness through lifestyle practices (such as massage, meditation, yoga, and dietary changes) and the use of herbal remedies.",
+        isAlternative: true,
+        isAyurveda: true,
+        therapeutic: [
+            { name: "Dhara", desc: "Treatment for chronic headaches, insomnia, mental tension and cases of hysteria, hallucination and insanity." },
+            { name: "Snehapanam", desc: "Treatment to alleviate osteoarthritis, leukemia etc." },
+            { name: "Sirovasti", desc: "For dryness of nostrils, mouth and throat, severe headaches, and burning sensation in the head." },
+            { name: "Pizhichil", desc: "For spondylosis, rheumatic diseases like arthritis, paralysis, and nervous disorders." },
+            { name: "Udvarthanam", desc: "For diseases like hemiplegia, paralysis, obesity and certain rheumatic ailments." },
+            { name: "Marma Chikitsa", desc: "Treatment for musculoskeletal ailments due to trauma or accidents." }
+        ],
+        rejuvenation: [
+            { name: "Kayakalpa Chikitsa", desc: "Body immunization and longevity treatment." },
+            { name: "Sweda Karma", desc: "Body Sudation for detoxification." },
+            { name: "Thaulyakna Chikitsa", desc: "Dedicated body slimming treatment." },
+            { name: "Beauty care", desc: "Herbal face packs and massages to improve complexion and beautify the body." },
+            { name: "Panchakarma", desc: "A five-fold treatment that tunes the body, scans, mind, breath, and purifies blood." }
+        ],
+        faqs: [
+            { q: "How long is a typical Ayurvedic retreat?", a: "Programs usually range from 7 to 21 days depending on whether it is for simple rejuvenation or deep therapeutic cleansing like Panchakarma." }
+        ]
+    },
+    "accupressure": {
+        title: "Accupressure",
+        contentImg: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=1200",
+        overview: "Acupressure is a form of Traditional Chinese Medicine, which focuses on applying pressure to specific points on the body. There are about 2,000 points on the body that connect to meridians, or pathways, through which energy flows.",
+        diseases: ["Stroke recovery", "Chronic Diarrhoea", "Enteritis", "Dementia care", "Skin Rashes / Allergies"],
+        symptoms: ["Back & Neck Pain", "Migraine & Headaches", "Chronic Fatigue", "Anxiety & Stress", "Immune deficiencies"],
+        faqs: [
+            { q: "How does Acupressure work?", a: "By applying pressure to specific points, it stimulates the body's natural self-curative abilities and releases tension." }
+        ]
+    },
+    "naturopathy": {
+        title: "Naturopathy",
+        contentImg: "https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&q=80&w=1200",
+        overview: "Naturopathy blends traditional medicine with conventional healthcare to work with the body on a natural level. It uses natural methods to support modern treatments and surgeries for holistic healing.",
+        diseases: ["Diabetes management", "Breathing & Respiratory issues", "Fertility issues", "Old Age related ailments", "Lifestyle diseases (PCOD, Hormonal)"],
+        symptoms: ["Chronic lethargy", "Digestive discomfort", "Hormonal imbalances", "Persistent stress"],
+        faqs: [
+            { q: "Can Naturopathy cure everything?", a: "Naturopathy is best used as a supportive system to enhance the body's baseline health and speed up recovery from chronic conditions." }
+        ]
+    },
+    "homeopathy": {
+        title: "Homeopathy",
+        contentImg: "https://images.unsplash.com/photo-1615486511484-92e172dc4ea0?auto=format&fit=crop&q=80&w=1200",
+        overview: "Homeopathy is a 200-year-old therapeutic system that uses infinitesimal doses of natural substances to stimulate the body's autoregulatory and self-healing processes.",
+        diseases: ["Asthma & Allergies", "Chronic Ear Infections", "High Fever", "Mental Health (Depression, Anxiety)", "Dermatitis & Eczema", "Arthritis"],
+        symptoms: ["Seasonal allergies", "Joint stiffness", "Recurrent infections", "Mood fluctuations"],
+        faqs: [
+            { q: "Are homeopathic medicines safe for children?", a: "Yes, homeopathy is known for being extremely gentle and free from side effects, making it a popular choice for pediatric care." }
+        ]
     }
 };
 
@@ -484,72 +655,201 @@ const TreatmentDetail = () => {
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-8">
-                            {/* Diseases List */}
-                            <div className="space-y-4 p-6 bg-brand-light/40 rounded-2xl border border-brand-blue/5">
-                                <h3 className="text-xl font-bold text-primary font-display">Types of Diseases handled by {data.title}</h3>
-                                <ul className="space-y-3">
-                                    {data.diseases.map((item: string, i: number) => (
-                                        <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                                            <div className="min-w-1.5 min-h-1.5 w-1.5 h-1.5 rounded-full bg-brand-blue mt-2" />
-                                            <span>{item}</span>
-                                        </li>
+                        {data.whoCanUndergo && (
+                            <div className="space-y-4">
+                                <h3 className="text-2xl font-bold text-primary font-display">Who can undergo this Package</h3>
+                                <div className="grid sm:grid-cols-2 gap-4">
+                                    {data.whoCanUndergo.map((item: string, i: number) => (
+                                        <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                            <div className="w-2 h-2 rounded-full bg-brand-red" />
+                                            <span className="text-slate-700 font-medium">{item}</span>
+                                        </div>
                                     ))}
-                                </ul>
+                                </div>
                             </div>
+                        )}
 
-                            {/* Symptoms List */}
-                            <div className="space-y-4 p-6 bg-white shadow-sm rounded-2xl border border-slate-100">
-                                <h3 className="text-xl font-bold text-primary font-display">Common Symptoms</h3>
-                                <ul className="space-y-3">
-                                    {data.symptoms.map((item: string, i: number) => (
-                                        <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                                            <div className="min-w-1.5 min-h-1.5 w-1.5 h-1.5 rounded-full bg-brand-red mt-2" />
-                                            <span>{item}</span>
-                                        </li>
+                        {data.principles && (
+                            <div className="space-y-6">
+                                <h3 className="text-2xl font-bold text-primary font-display pb-2 border-b-2 border-brand-red/10 inline-block">5 Principles of Yoga</h3>
+                                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                                    {data.principles.map((item: any, i: number) => (
+                                        <div key={i} className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                                            <div className="text-brand-red font-bold text-sm mb-1">{item.label}</div>
+                                            <div className="text-primary font-bold text-lg">{item.value}</div>
+                                        </div>
                                     ))}
-                                </ul>
+                                </div>
                             </div>
-                        </div>
+                        )}
+
+                        {data.isAyurveda && (
+                            <div className="space-y-12">
+                                <div className="space-y-6">
+                                    <div className="flex justify-center">
+                                        <div className="bg-primary text-white font-bold py-2 px-8 rounded-full shadow-lg">Therapeutic</div>
+                                    </div>
+                                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        {data.therapeutic.map((item: any, i: number) => (
+                                            <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:translate-y-[-4px] transition-transform duration-300">
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <div className="w-5 h-5 rounded-full bg-brand-blue flex items-center justify-center">
+                                                        <div className="w-2 h-2 bg-white rounded-full" />
+                                                    </div>
+                                                    <h4 className="font-bold text-primary">{item.name}</h4>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="space-y-6">
+                                    <div className="flex justify-center">
+                                        <div className="bg-brand-blue text-white font-bold py-2 px-8 rounded-full shadow-lg">Rejuvenation</div>
+                                    </div>
+                                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        {data.rejuvenation.map((item: any, i: number) => (
+                                            <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:translate-y-[-4px] transition-transform duration-300">
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <div className="w-5 h-5 rounded-full bg-brand-red flex items-center justify-center">
+                                                        <div className="w-2 h-2 bg-white rounded-full" />
+                                                    </div>
+                                                    <h4 className="font-bold text-primary">{item.name}</h4>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {!data.isPackage && !data.isAlternative && data.diseases && (
+                            <div className="grid md:grid-cols-2 gap-8">
+                                {/* Diseases List */}
+                                <div className="space-y-4 p-6 bg-brand-light/40 rounded-2xl border border-brand-blue/5">
+                                    <h3 className="text-xl font-bold text-primary font-display">Types of Diseases handled by {data.title}</h3>
+                                    <ul className="space-y-3">
+                                        {data.diseases.map((item: string, i: number) => (
+                                            <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                                                <div className="min-w-1.5 min-h-1.5 w-1.5 h-1.5 rounded-full bg-brand-blue mt-2" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                {/* Symptoms List */}
+                                <div className="space-y-4 p-6 bg-white shadow-sm rounded-2xl border border-slate-100">
+                                    <h3 className="text-xl font-bold text-primary font-display">Common Symptoms</h3>
+                                    <ul className="space-y-3">
+                                        {data.symptoms.map((item: string, i: number) => (
+                                            <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                                                <div className="min-w-1.5 min-h-1.5 w-1.5 h-1.5 rounded-full bg-brand-red mt-2" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Standard Alternative view (Accupressure, Homeopathy, etc) */}
+                        {data.isAlternative && !data.isAyurveda && !data.principles && data.diseases && (
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div className="space-y-4">
+                                    <h3 className="text-xl font-bold text-primary font-display">Types of Diseases treated</h3>
+                                    <ul className="space-y-3">
+                                        {data.diseases.map((item: string, i: number) => (
+                                            <li key={i} className="flex items-center gap-2 text-muted-foreground">
+                                                <div className="w-1.5 h-1.5 bg-brand-blue rounded-full" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-xl font-bold text-primary font-display">Symptoms</h3>
+                                    <ul className="space-y-3">
+                                        {data.symptoms.map((item: string, i: number) => (
+                                            <li key={i} className="flex items-center gap-2 text-muted-foreground">
+                                                <div className="w-1.5 h-1.5 bg-brand-red rounded-full" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
 
                         {/* Procedures Pricing Section */}
-                        <div className="space-y-6 pt-6">
-                            <h3 className="text-2xl font-bold text-primary font-display">Cost of Some Major Procedures</h3>
-
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {data.procedures.map((proc: any, i: number) => (
-                                    <div key={i} className="bg-white border border-brand-blue/10 p-6 rounded-2xl shadow-premium hover:-translate-y-1 transition-transform duration-300">
-                                        <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-1.5">Procedure</div>
-                                        <div className="font-bold text-primary text-sm mb-5 leading-tight h-[40px]">{proc.name}</div>
-
-                                        <div className="space-y-4">
-                                            <div>
-                                                <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-1">Total Range</div>
-                                                <div className="text-brand-blue font-bold text-sm bg-brand-light/50 inline-block px-3 py-1 rounded-md">{proc.range}</div>
-                                            </div>
-
-                                            <div>
-                                                <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-1">Estimated Stay</div>
-                                                <div className="text-slate-700 font-bold text-sm flex items-center gap-2">
-                                                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300" />
-                                                    {proc.days}
+                        {!data.isAlternative && (
+                            <div>
+                                {data.isPackage ? (
+                                    <div className="space-y-8 pt-6">
+                                        <h3 className="text-2xl font-bold text-primary font-display pb-2 border-b-2 border-brand-blue/10 inline-block">Package Inclusions</h3>
+                                        <div className="grid sm:grid-cols-2 gap-4">
+                                            {data.packageIncludes.map((item: any, i: number) => (
+                                                <div key={i} className="flex flex-col p-5 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                                                    <span className="text-[10px] font-bold text-brand-blue uppercase tracking-widest mb-1">{item.label}</span>
+                                                    <span className="text-primary font-bold text-sm leading-tight">{item.value}</span>
                                                 </div>
+                                            ))}
+                                        </div>
+                                        <div className="bg-brand-blue rounded-2xl p-6 text-white flex flex-col md:flex-row justify-between items-center gap-4">
+                                            <div>
+                                                <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-1">Package Price</div>
+                                                <div className="text-3xl font-bold font-display">{data.price}</div>
                                             </div>
+                                            <ContactModal triggerClassName="w-full md:w-auto">
+                                                <button className="bg-brand-red hover:bg-red-600 text-white font-bold py-4 px-10 rounded-xl transition-all shadow-lg active:scale-95">
+                                                    Book This Package
+                                                </button>
+                                            </ContactModal>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="space-y-6 pt-6">
+                                        <h3 className="text-2xl font-bold text-primary font-display">Cost of Some Major Procedures</h3>
+
+                                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                            {data.procedures.map((proc: any, i: number) => (
+                                                <div key={i} className="bg-white border border-brand-blue/10 p-6 rounded-2xl shadow-premium hover:-translate-y-1 transition-transform duration-300">
+                                                    <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-1.5">Procedure</div>
+                                                    <div className="font-bold text-primary text-sm mb-5 leading-tight h-[40px]">{proc.name}</div>
+
+                                                    <div className="space-y-4">
+                                                        <div>
+                                                            <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-1">Total Range</div>
+                                                            <div className="text-brand-blue font-bold text-sm bg-brand-light/50 inline-block px-3 py-1 rounded-md">{proc.range}</div>
+                                                        </div>
+
+                                                        <div>
+                                                            <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-1">Estimated Stay</div>
+                                                            <div className="text-slate-700 font-bold text-sm flex items-center gap-2">
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-slate-300" />
+                                                                {proc.days}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <ContactModal triggerClassName="w-full mt-6">
+                                                        <button className="w-full bg-primary text-white font-bold py-3 rounded-xl text-sm hover:bg-brand-blue transition-colors shadow-md">
+                                                            Book Now
+                                                        </button>
+                                                    </ContactModal>
+                                                </div>
+                                            ))}
                                         </div>
 
-                                        <ContactModal triggerClassName="w-full mt-6">
-                                            <button className="w-full bg-primary text-white font-bold py-3 rounded-xl text-sm hover:bg-brand-blue transition-colors shadow-md">
-                                                Book Now
-                                            </button>
-                                        </ContactModal>
+                                        <p className="text-sm text-brand-red font-medium italic mt-4">
+                                            Note: Costing shown is a rough estimate. Please contact us for exact customized quotes based on your medical reports.
+                                        </p>
                                     </div>
-                                ))}
+                                )}
                             </div>
-
-                            <p className="text-sm text-brand-red font-medium italic mt-4">
-                                Note: Costing shown is a rough estimate. Please contact us for exact customized quotes based on your medical reports.
-                            </p>
-                        </div>
+                        )}
 
                         {/* Huge CTA */}
                         <ContactModal triggerClassName="w-full">
