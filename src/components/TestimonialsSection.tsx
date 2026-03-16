@@ -60,9 +60,6 @@ const TestimonialsSection = () => {
 
                 <div className="pt-6 border-t border-brand-blue/5 flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-md">
-                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                    </div>
                     <div>
                       <p className="font-bold text-primary tracking-tight">{item.name}</p>
                       <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{item.city}</p>
@@ -79,12 +76,6 @@ const TestimonialsSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-20 text-center">
-          <button className="text-primary font-bold text-sm uppercase tracking-[0.2em] hover:text-brand-red transition-colors flex items-center gap-3 mx-auto group">
-            Watch Video Success Stories <span className="w-10 h-10 rounded-full border border-brand-blue/20 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-all">▶</span>
-          </button>
         </div>
       </div>
     </section>

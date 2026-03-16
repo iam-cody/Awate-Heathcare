@@ -14,21 +14,41 @@ export const ContactModal = ({ children, triggerClassName = "" }: { children?: R
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
-    // Form submission handler to simulate an API call
-    const handleSubmit = (e: React.FormEvent) => {
+    // Form submission handler to send data to Web3Forms
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate network delay
-        setTimeout(() => {
+        
+        const formData = new FormData(e.target as HTMLFormElement);
+        // GET YOUR ACCESS KEY FROM https://web3forms.com/
+        formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE"); 
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitted(true);
+                // Auto close after 3 seconds showing success
+                setTimeout(() => {
+                    setOpen(false);
+                    // Reset form state after closing
+                    setTimeout(() => setSubmitted(false), 500);
+                }, 3000);
+            } else {
+                console.error("Error submitting form", data);
+                alert("Something went wrong. Please try again or contact us directly.");
+            }
+        } catch (error) {
+            console.error("Error submitting form", error);
+            alert("Something went wrong. Please try again or contact us directly.");
+        } finally {
             setIsSubmitting(false);
-            setSubmitted(true);
-            // Auto close after 3 seconds showing success
-            setTimeout(() => {
-                setOpen(false);
-                // Reset form state after closing
-                setTimeout(() => setSubmitted(false), 500);
-            }, 3000);
-        }, 1500);
+        }
     };
 
     return (
@@ -71,6 +91,7 @@ export const ContactModal = ({ children, triggerClassName = "" }: { children?: R
                                 <label className="text-sm font-bold text-primary">Patient Name</label>
                                 <input
                                     type="text"
+                                    name="patient_name"
                                     required
                                     placeholder="Enter your full name"
                                     className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium"
@@ -85,9 +106,10 @@ export const ContactModal = ({ children, triggerClassName = "" }: { children?: R
                                     </span>
                                     <input
                                         type="tel"
+                                        name="phone"
                                         required
                                         maxLength={10}
-                                        placeholder="98765 43210"
+                                        placeholder="72080 80848"
                                         className="flex-1 px-4 py-3 rounded-r-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium"
                                     />
                                 </div>
@@ -96,6 +118,7 @@ export const ContactModal = ({ children, triggerClassName = "" }: { children?: R
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-primary">Medical Condition / Query</label>
                                 <textarea
+                                    name="medical_query"
                                     required
                                     rows={3}
                                     placeholder="Briefly describe what you need help with..."

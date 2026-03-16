@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-white/40 uppercase tracking-widest">Call Anytime</p>
-                  <p className="text-sm font-semibold text-white/80">+91 98765 43210</p>
+                  <p className="text-sm font-semibold text-white/80">+91 72080 80848</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Phone } from "lucide-react";
+import { ContactModal } from "@/components/ContactModal";
 
 const FinalCTA = () => {
     return (
@@ -23,11 +24,13 @@ const FinalCTA = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 items-center">
-                        <Button size="lg" className="bg-white text-brand-blue hover:bg-brand-red hover:text-white h-16 px-10 text-lg font-bold shadow-2xl transition-all transform hover:scale-105 group">
-                            Book Free Consultation <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Button>
+                        <ContactModal>
+                            <Button size="lg" className="bg-white text-brand-blue hover:bg-brand-red hover:text-white h-16 px-10 text-lg font-bold shadow-2xl transition-all transform hover:scale-105 group">
+                                Book Free Consultation <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                        </ContactModal>
 
-                        <a href="https://wa.me/919876543210" className="flex items-center gap-3 text-white font-bold text-lg px-8 py-4 rounded-2xl border-2 border-white/20 hover:bg-white/10 transition-all group">
+                        <a href="https://wa.me/917208080848" className="flex items-center gap-3 text-white font-bold text-lg px-8 py-4 rounded-2xl border-2 border-white/20 hover:bg-white/10 transition-all group">
                             <MessageCircle className="w-6 h-6 text-brand-green group-hover:scale-110 transition-transform" />
                             Talk on WhatsApp
                         </a>
@@ -38,7 +41,7 @@ const FinalCTA = () => {
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white">
                                 <Phone className="w-4 h-4" />
                             </div>
-                            <p className="text-sm">Emergency Support: <span className="text-white font-bold">+91 98765 43210</span></p>
+                            <p className="text-sm">Emergency Support: <span className="text-white font-bold">+91 72080 80848</span></p>
                         </div>
                         <div className="hidden md:block w-px h-6 bg-white/10" />
                         <div className="flex items-center gap-3">

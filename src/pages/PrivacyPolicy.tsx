@@ -46,7 +46,7 @@ const PrivacyPolicy = () => {
                     <p>
                         If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at: <br /><br />
                         <strong>Email:</strong> info@awatehealthcare.com <br />
-                        <strong>Phone:</strong> +91 98765 43210
+                        <strong>Phone:</strong> +91 72080 80848
                     </p>
                 </div>
             </div>

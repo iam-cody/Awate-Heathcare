@@ -24,7 +24,7 @@ const specialties = [
     {
         title: "IVF & Fertility",
         description: "Compassionate care and high success rates for assisted reproduction journeys.",
-        img: "https://images.unsplash.com/photo-1532187875302-1df62ea53b1b?auto=format&fit=crop&q=80&w=800", // Lab/Microscope for Embryo
+        img: "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&q=80&w=800", // Lab/Microscope for Embryo
         link: "/ivf-fertility"
     },
     {

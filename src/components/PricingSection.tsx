@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Info } from "lucide-react";
+import { Check, Info, MessageCircle } from "lucide-react";
 
 const pricingData = [
     {
@@ -51,9 +51,6 @@ const PricingSection = () => {
                                     *Final costs vary based on hospital choice, Room Type, and patient medical profile.
                                 </p>
                             </div>
-                            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-brand-red-dark h-14 w-fit px-10 shadow-premium">
-                                Request Detailed Cost Estimate
-                            </Button>
                         </div>
                     </div>
 

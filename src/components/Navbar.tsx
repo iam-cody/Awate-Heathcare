@@ -54,11 +54,11 @@ const Navbar = () => {
 
         {/* CTAs */}
         <div className="hidden lg:flex items-center gap-6">
-          <a href="tel:+919876543210" className="flex items-center gap-2 text-sm text-primary font-bold hover:text-brand-red transition-colors">
+          <a href="tel:+917208080848" className="flex items-center gap-2 text-sm text-primary font-bold hover:text-brand-red transition-colors">
             <div className="w-8 h-8 rounded-full bg-brand-blue/5 flex items-center justify-center">
               <Phone className="w-4 h-4" />
             </div>
-            +91 98765 43210
+            +91 72080 80848
           </a>
           <ContactModal>
             <Button className="bg-accent text-accent-foreground hover:bg-brand-red-dark font-bold px-6 shadow-premium transition-all hover:scale-105">
@@ -99,7 +99,7 @@ const Navbar = () => {
             </ContactModal>
             <div className="flex items-center justify-center gap-2 text-primary font-bold">
               <Phone className="w-5 h-5 text-brand-green" />
-              +91 98765 43210
+              +91 72080 80848
             </div>
           </div>
         </div>

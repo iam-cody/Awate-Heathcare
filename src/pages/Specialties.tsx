@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 import { Phone } from "lucide-react";
 
 const specialitiesList = [
-    { name: "Cardiology", img: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&q=80&w=600", link: "/cardiology" },
+    { name: "Cardiology", img: "https://plus.unsplash.com/premium_photo-1661774008595-375997e2a2b9?auto=format&fit=crop&q=80&w=600", link: "/cardiology" },
     { name: "Orthopedics", img: "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?auto=format&fit=crop&q=80&w=600", link: "/orthopedics" },
     { name: "Oncology", img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600", link: "/oncology" },
-    { name: "IVF & Fertility", img: "https://images.unsplash.com/photo-1532187875302-1df62ea53b1b?auto=format&fit=crop&q=80&w=600", link: "/ivf-fertility" },
+    { name: "IVF & Fertility", img: "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&q=80&w=600", link: "/ivf-fertility" },
     { name: "Neurosurgery", img: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=80&w=600", link: "/neurosurgery" },
     { name: "Kidney Care", img: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&q=80&w=600", link: "/kidney-care" },
     { name: "Diabetology", img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600", link: "/diabetology" },
@@ -18,11 +18,11 @@ const specialitiesList = [
     { name: "ENT", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600", link: "/ent" },
     { name: "Pulmonology", img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=600", link: "/pulmonology" },
     { name: "Ophthalmology", img: "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?auto=format&fit=crop&q=80&w=600", link: "/ophthalmology" },
-    { name: "General Surgery", img: "https://images.unsplash.com/photo-1551076805-e1869043e560?auto=format&fit=crop&q=80&w=600", link: "/general-surgery" },
+    { name: "General Surgery", img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600", link: "/general-surgery" },
     { name: "Psychiatry", img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600", link: "/psychiatry" },
     { name: "Endocrinology", img: "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&q=80&w=600", link: "/endocrinology" },
-    { name: "Bariatric Surgery", img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=600", link: "/bariatric-surgery" },
-    { name: "Plastic Surgery", img: "https://images.unsplash.com/photo-1512736912-cd9f15fe2305?auto=format&fit=crop&q=80&w=600", link: "/plastic-surgery" },
+    { name: "Bariatric Surgery", img: "https://plus.unsplash.com/premium_photo-1661769322161-ef5fc1347252?auto=format&fit=crop&q=80&w=600", link: "/bariatric-surgery" },
+    { name: "Plastic Surgery", img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=600", link: "/plastic-surgery" },
     { name: "Transplant", img: "https://images.unsplash.com/photo-1519494080410-f9aa76cb4283?auto=format&fit=crop&q=80&w=600", link: "/transplant" },
     { name: "Paediatric", img: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&q=80&w=600", link: "/paediatric" },
     { name: "Gastroenterology", img: "https://images.unsplash.com/photo-1584516150909-c43483ee7932?auto=format&fit=crop&q=80&w=600", link: "/gastroenterology" }
@@ -31,7 +31,7 @@ const specialitiesList = [
 const wellnessList = [
     { name: "Cancer Screening Package", img: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=600", link: "/cancer-screening" },
     { name: "Diabetes Screening Package", img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600", link: "/diabetes-screening" },
-    { name: "Preventive Heart Package", img: "https://images.unsplash.com/photo-1505592225030-dad7a0531844?auto=format&fit=crop&q=80&w=600", link: "/heart-package" },
+    { name: "Preventive Heart Package", img: "https://plus.unsplash.com/premium_photo-1717549106403-2d53a65728d2?auto=format&fit=crop&q=80&w=600", link: "/heart-package" },
     { name: "Executive Health Check Up", img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600", link: "/executive-checkup" },
     { name: "Female Wellness Package", img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600", link: "/female-wellness" },
     { name: "Male Wellness Package", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600", link: "/male-wellness" }
@@ -41,8 +41,8 @@ const alternativeList = [
     { name: "Yoga", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600", link: "/yoga" },
     { name: "Ayurveda", img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=600", link: "/ayurveda" },
     { name: "Acupressure", img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=600", link: "/acupressure" },
-    { name: "Naturopathy", img: "https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&q=80&w=600", link: "/naturopathy" },
-    { name: "Homeopathy", img: "https://images.unsplash.com/photo-1615486511484-92e172dc4ea0?auto=format&fit=crop&q=80&w=600", link: "/homeopathy" }
+    { name: "Naturopathy", img: "https://plus.unsplash.com/premium_photo-1675018082270-0593e4100e0a?auto=format&fit=crop&q=80&w=600", link: "/naturopathy" },
+    { name: "Homeopathy", img: "https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&q=80&w=600", link: "/homeopathy" }
 ];
 
 const SpecialtyCard = ({ item }: { item: any }) => {
@@ -119,7 +119,7 @@ const Specialties = () => {
                         <div className="bg-brand-red p-2 rounded-full group-hover:scale-110 transition-transform">
                             <Phone className="w-5 h-5 text-white" />
                         </div>
-                        <span className="text-white font-bold text-sm md:text-base tracking-widest whitespace-nowrap">24/7 HELPLINE: +91 98765 43210</span>
+                        <span className="text-white font-bold text-sm md:text-base tracking-widest whitespace-nowrap">24/7 HELPLINE: +91 72080 80848</span>
                     </div>
                 </div>
             </div>

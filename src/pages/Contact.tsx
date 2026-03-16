@@ -12,20 +12,40 @@ const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
-    // Form submission handler to simulate an API call
-    const handleSubmit = (e: React.FormEvent) => {
+    // Form submission handler to send data to Web3Forms
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate network delay
-        setTimeout(() => {
+
+        const formData = new FormData(e.target as HTMLFormElement);
+        // GET YOUR ACCESS KEY FROM https://web3forms.com/
+        formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE");
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitted(true);
+                // Auto reset after some time
+                setTimeout(() => {
+                    setSubmitted(false);
+                    (e.target as HTMLFormElement).reset();
+                }, 5000);
+            } else {
+                console.error("Error submitting form", data);
+                alert("Something went wrong. Please try again or contact us directly.");
+            }
+        } catch (error) {
+            console.error("Error submitting form", error);
+            alert("Something went wrong. Please try again or contact us directly.");
+        } finally {
             setIsSubmitting(false);
-            setSubmitted(true);
-            // Auto reset after some time
-            setTimeout(() => {
-                setSubmitted(false);
-                (e.target as HTMLFormElement).reset();
-            }, 5000);
-        }, 1500);
+        }
     };
 
     return (
@@ -65,8 +85,8 @@ const Contact = () => {
                                 <div>
                                     <h4 className="text-lg font-bold text-primary mb-1">Call Us 24/7</h4>
                                     <p className="text-muted-foreground text-sm mb-2">For immediate emergencies and queries.</p>
-                                    <a href="tel:+919876543210" className="text-brand-blue font-bold text-lg hover:underline transition-all">
-                                        +91 98765 43210
+                                    <a href="tel:+917208080848" className="text-brand-blue font-bold text-lg hover:underline transition-all">
+                                        +91 72080 80848
                                     </a>
                                 </div>
                             </div>
@@ -125,31 +145,31 @@ const Contact = () => {
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold text-primary">First Name *</label>
-                                        <input type="text" required placeholder="John" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium" />
+                                        <input type="text" name="first_name" required placeholder="John" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold text-primary">Last Name</label>
-                                        <input type="text" placeholder="Doe" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium" />
+                                        <input type="text" name="last_name" placeholder="Doe" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium" />
                                     </div>
                                 </div>
 
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold text-primary">Email Address *</label>
-                                        <input type="email" required placeholder="john@example.com" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium" />
+                                        <input type="email" name="email" required placeholder="john@example.com" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold text-primary">Phone Number *</label>
                                         <div className="flex">
                                             <span className="inline-flex items-center px-3 rounded-l-xl border border-r-0 border-slate-200 bg-slate-100 text-slate-500 font-bold text-sm">+91</span>
-                                            <input type="tel" required maxLength={10} placeholder="98765 43210" className="flex-1 w-full px-4 py-3 rounded-r-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium" />
+                                            <input type="tel" name="phone" required maxLength={10} placeholder="72080 80848" className="flex-1 w-full px-4 py-3 rounded-r-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
                                     <label className="text-sm font-bold text-primary">Which treatment are you looking for? *</label>
-                                    <select required className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium text-slate-700">
+                                    <select name="selected_treatment" required className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium text-slate-700">
                                         <option value="" disabled selected>Select a treatment</option>
                                         <option value="cardiology">Cardiology</option>
                                         <option value="orthopedics">Orthopedics</option>
@@ -163,7 +183,7 @@ const Contact = () => {
 
                                 <div className="space-y-2">
                                     <label className="text-sm font-bold text-primary">Medical Condition Details *</label>
-                                    <textarea required rows={4} placeholder="Please provide any relevant details about your condition, past surgeries, or current symptoms..." className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium resize-none"></textarea>
+                                    <textarea name="medical_condition_details" required rows={4} placeholder="Please provide any relevant details about your condition, past surgeries, or current symptoms..." className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all font-medium resize-none"></textarea>
                                 </div>
 
                                 <Button

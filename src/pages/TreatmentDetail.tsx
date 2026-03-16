@@ -17,7 +17,7 @@ import { ContactModal } from "@/components/ContactModal";
 const treatmentsData: Record<string, any> = {
     cardiology: {
         title: "Cardiology",
-        contentImg: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200",
+        contentImg: "https://plus.unsplash.com/premium_photo-1661774008595-375997e2a2b9?auto=format&fit=crop&q=80&w=1200",
         overview: "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist. There are few types of Cardiology which a Premium Life Care suggestive doctor or the team assesses you in terms of your qualification to get proper cardiology checkups in place.",
         diseases: [
             "High Blood Pressure", "Heart Attacks", "Coronary Artery Disease", "Valvular Disease", "Congenital Heart Defects", "Heart Failure"
@@ -281,7 +281,7 @@ const treatmentsData: Record<string, any> = {
     },
     "general-surgery": {
         title: "General & Laparoscopic Surgery",
-        contentImg: "https://images.unsplash.com/photo-1551076805-e1869043e560?auto=format&fit=crop&q=80&w=1200",
+        contentImg: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1200",
         overview: "Expertise in specialized surgical management of the abdomen, digestive tract, endocrine system, and breast, utilizing minimally invasive laparoscopic tools.",
         diseases: ["Hernia", "Gallstones", "Appendicitis", "Thyroid Disorders", "Breast Tumors", "Hemorrhoids / Fissures"],
         symptoms: ["Severe abdominal pain", "Unexplained swelling or lumps", "Difficulty swallowing", "Chronic digestive issues"],
@@ -332,7 +332,7 @@ const treatmentsData: Record<string, any> = {
     },
     "bariatric-surgery": {
         title: "Bariatric & Weight Loss Surgery",
-        contentImg: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1200",
+        contentImg: "https://plus.unsplash.com/premium_photo-1661769322161-ef5fc1347252?auto=format&fit=crop&q=80&w=1200",
         overview: "Life-changing surgical procedures designed to induce significant weight loss and resolve severe obesity-related conditions like type 2 diabetes and hypertension.",
         diseases: ["Severe Obesity", "Metabolic Syndrome", "Obesity-induced Sleep Apnea", "Type 2 Diabetes associated with Obesity"],
         symptoms: ["BMI over 35/40", "Joint pain due to weight", "Chronic fatigue", "Unsuccessful long-term weight loss via diet/exercise"],
@@ -349,7 +349,7 @@ const treatmentsData: Record<string, any> = {
     },
     "plastic-surgery": {
         title: "Plastic, Reconstructive & Aesthetic Surgery",
-        contentImg: "https://images.unsplash.com/photo-1512736912-cd9f15fe2305?auto=format&fit=crop&q=80&w=1200",
+        contentImg: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=1200",
         overview: "Enhance your natural beauty and reconstruct bodily defects using highly precise, technologically advanced aesthetic and reconstructive surgical techniques.",
         diseases: ["Burn Injuries", "Congenital Defects (e.g., Cleft Lip)", "Breast Cancer (Reconstruction)", "Trauma/Scarring", "Aesthetic Dissatisfaction"],
         symptoms: ["Physical disfigurement", "Functional impairment due to trauma", "Breathing issues (deviated septum)", "Excess skin/fat"],
@@ -461,7 +461,7 @@ const treatmentsData: Record<string, any> = {
     "heart-package": {
         title: "Preventive Heart Package",
         isPackage: true,
-        contentImg: "https://images.unsplash.com/photo-1505592225030-dad7a0531844?auto=format&fit=crop&q=80&w=1200",
+        contentImg: "https://plus.unsplash.com/premium_photo-1717549106403-2d53a65728d2?auto=format&fit=crop&q=80&w=1200",
         overview: "Cardiovascular diseases are a leading cause of global health issues. Our Preventive Heart Package provides a deep dive into your cardiac health using advanced diagnostics and specialist reviews.",
         packageIncludes: [
             { label: "Pathology & Diabetes", value: "CBC, ESR, Blood Glucose" },
@@ -570,7 +570,7 @@ const treatmentsData: Record<string, any> = {
     },
     "naturopathy": {
         title: "Naturopathy",
-        contentImg: "https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&q=80&w=1200",
+        contentImg: "https://plus.unsplash.com/premium_photo-1675018082270-0593e4100e0a?auto=format&fit=crop&q=80&w=1200",
         overview: "Naturopathy blends traditional medicine with conventional healthcare to work with the body on a natural level. It uses natural methods to support modern treatments and surgeries for holistic healing.",
         diseases: ["Diabetes management", "Breathing & Respiratory issues", "Fertility issues", "Old Age related ailments", "Lifestyle diseases (PCOD, Hormonal)"],
         symptoms: ["Chronic lethargy", "Digestive discomfort", "Hormonal imbalances", "Persistent stress"],
@@ -580,7 +580,7 @@ const treatmentsData: Record<string, any> = {
     },
     "homeopathy": {
         title: "Homeopathy",
-        contentImg: "https://images.unsplash.com/photo-1615486511484-92e172dc4ea0?auto=format&fit=crop&q=80&w=1200",
+        contentImg: "https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&q=80&w=1200",
         overview: "Homeopathy is a 200-year-old therapeutic system that uses infinitesimal doses of natural substances to stimulate the body's autoregulatory and self-healing processes.",
         diseases: ["Asthma & Allergies", "Chronic Ear Infections", "High Fever", "Mental Health (Depression, Anxiety)", "Dermatitis & Eczema", "Arthritis"],
         symptoms: ["Seasonal allergies", "Joint stiffness", "Recurrent infections", "Mood fluctuations"],
