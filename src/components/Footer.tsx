@@ -26,11 +26,17 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="font-display font-bold text-lg text-white">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "About Us", "Our Process", "Hospital Network", "Contact"].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(/\s/g, "")}`} className="group flex items-center gap-2 text-primary-foreground/70 hover:text-white transition-all text-sm">
+              {[
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/#about" },
+                { label: "Our Process", href: "/#process" },
+                { label: "Hospital Network", href: "/#partners" },
+                { label: "Contact", href: "/contact" }
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="group flex items-center gap-2 text-primary-foreground/70 hover:text-white transition-all text-sm">
                     <span className="w-1.5 h-px bg-brand-red opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -71,7 +77,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-white/40 uppercase tracking-widest">Email Us</p>
-                  <p className="text-sm font-semibold text-white/80">info@awatehealthcare.com</p>
+                  <p className="text-sm font-semibold text-white/80">awatehealthcare@gmail.com</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -80,7 +86,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-white/40 uppercase tracking-widest">Office</p>
-                  <p className="text-sm font-semibold text-white/80">Mumbai, India</p>
+                  <p className="text-sm font-semibold text-white/80 whitespace-pre-line">AL-5/2/11, Sec-16, Airoli,{"\n"}Navi Mumbai 400708</p>
                 </div>
               </li>
             </ul>

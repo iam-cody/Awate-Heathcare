@@ -98,8 +98,8 @@ const Contact = () => {
                                 <div>
                                     <h4 className="text-lg font-bold text-primary mb-1">Email Our Doctors</h4>
                                     <p className="text-muted-foreground text-sm mb-2">Send your medical reports directly for assessment.</p>
-                                    <a href="mailto:info@awatehealthcare.com" className="text-brand-red font-bold text-lg hover:underline transition-all">
-                                        info@awatehealthcare.com
+                                    <a href="mailto:awatehealthcare@gmail.com" className="text-brand-red font-bold text-lg hover:underline transition-all">
+                                        awatehealthcare@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -111,10 +111,10 @@ const Contact = () => {
                                 <div>
                                     <h4 className="text-lg font-bold text-primary mb-1">Head Office</h4>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Awate Healthcare Solutions <br />
-                                        1st Floor, Trade Center <br />
-                                        Bandra Kurla Complex, Mumbai <br />
-                                        Maharashtra, India 400051
+                                        AL-5/2/11, Garden View apartment <br />
+                                        Sec-16, Airoli, Navi Mumbai <br />
+                                        Near Radhikabai School <br />
+                                        Navi Mumbai 400708
                                     </p>
                                 </div>
                             </div>

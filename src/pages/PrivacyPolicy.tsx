@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
                     <h2 className="text-2xl font-bold text-primary mt-8 mb-4">5. Contact Us</h2>
                     <p>
                         If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at: <br /><br />
-                        <strong>Email:</strong> info@awatehealthcare.com <br />
+                        <strong>Email:</strong> awatehealthcare@gmail.com <br />
                         <strong>Phone:</strong> +91 72080 80848
                     </p>
                 </div>

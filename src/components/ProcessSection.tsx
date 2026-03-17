@@ -29,7 +29,7 @@ const steps = [
 
 const ProcessSection = () => {
     return (
-        <section className="section-padding">
+        <section id="process" className="section-padding">
             <div className="container-max">
                 <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
                     <span className="text-brand-red font-bold text-sm uppercase tracking-[0.3em]">Patient Journey</span>
