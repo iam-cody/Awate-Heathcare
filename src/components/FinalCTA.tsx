@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Phone } from "lucide-react";
-import { ContactModal } from "@/components/ContactModal";
+
 
 const FinalCTA = () => {
     return (
@@ -24,16 +24,11 @@ const FinalCTA = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 items-center">
-                        <ContactModal>
-                            <Button size="lg" className="bg-white text-brand-blue hover:bg-brand-red hover:text-white h-16 px-10 text-lg font-bold shadow-2xl transition-all transform hover:scale-105 group">
-                                Book Free Consultation <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </Button>
-                        </ContactModal>
-
-                        <a href="https://wa.me/917208080848" className="flex items-center gap-3 text-white font-bold text-lg px-8 py-4 rounded-2xl border-2 border-white/20 hover:bg-white/10 transition-all group">
-                            <MessageCircle className="w-6 h-6 text-brand-green group-hover:scale-110 transition-transform" />
-                            Talk on WhatsApp
-                        </a>
+                        <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#128C7E] text-white h-16 px-10 text-lg font-bold shadow-2xl transition-all transform hover:scale-105 group">
+                            <a href="https://wa.me/917208080848" target="_blank" rel="noopener noreferrer">
+                                <MessageCircle className="mr-2 w-6 h-6" /> Talk on WhatsApp <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </a>
+                        </Button>
                     </div>
 
                     <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center gap-8 text-white/60">

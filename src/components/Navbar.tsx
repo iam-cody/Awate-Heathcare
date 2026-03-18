@@ -60,11 +60,12 @@ const Navbar = () => {
             </div>
             +91 72080 80848
           </a>
-          <ContactModal>
-            <Button className="bg-accent text-accent-foreground hover:bg-brand-red-dark font-bold px-6 shadow-premium transition-all hover:scale-105">
-              Book Free Consultation
-            </Button>
-          </ContactModal>
+          <Button asChild className="bg-[#25D366] text-white hover:bg-[#128C7E] font-bold px-6 shadow-premium transition-all hover:scale-105 gap-2">
+            <a href="https://wa.me/917208080848" target="_blank" rel="noopener noreferrer">
+              <MessageSquare className="w-4 h-4" />
+              WhatsApp Us
+            </a>
+          </Button>
         </div>
 
         {/* Mobile toggle */}
@@ -92,11 +93,12 @@ const Navbar = () => {
             ))}
           </nav>
           <div className="pt-6 border-t border-brand-blue/5 space-y-4">
-            <ContactModal>
-              <Button className="w-full bg-accent text-white h-14 text-lg font-bold rounded-xl shadow-premium">
-                Book Free Consultation
-              </Button>
-            </ContactModal>
+            <Button asChild className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white h-14 text-lg font-bold rounded-xl shadow-premium gap-2">
+              <a href="https://wa.me/917208080848" target="_blank" rel="noopener noreferrer">
+                <MessageSquare className="w-5 h-5" />
+                WhatsApp Us
+              </a>
+            </Button>
             <div className="flex items-center justify-center gap-2 text-primary font-bold">
               <Phone className="w-5 h-5 text-brand-green" />
               +91 72080 80848

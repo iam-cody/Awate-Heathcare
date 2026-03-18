@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-medical.jpg";
-import { ContactModal } from "@/components/ContactModal";
+
 
 const HeroSection = () => {
   return (
@@ -31,14 +31,9 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <ContactModal>
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-brand-red-dark gap-2 px-10 h-14 text-lg font-semibold shadow-premium transition-all hover:scale-105">
-                  Book Free Consultation <ArrowRight className="w-5 h-5" />
-                </Button>
-              </ContactModal>
-              <Button asChild size="lg" variant="outline" className="gap-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white h-14 px-8 text-lg font-semibold transition-all">
+              <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#128C7E] text-white gap-2 px-10 h-14 text-lg font-semibold shadow-premium transition-all hover:scale-105">
                 <a href="https://wa.me/917208080848" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-5 h-5" /> Talk on WhatsApp
+                  <MessageCircle className="w-5 h-5" /> Talk on WhatsApp <ArrowRight className="w-5 h-5 ml-1" />
                 </a>
               </Button>
             </div>
