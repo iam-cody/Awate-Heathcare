@@ -25,7 +25,10 @@ const specialitiesList = [
     { name: "Plastic Surgery", img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=600", link: "/plastic-surgery" },
     { name: "Transplant", img: "https://images.unsplash.com/photo-1519494080410-f9aa76cb4283?auto=format&fit=crop&q=80&w=600", link: "/transplant" },
     { name: "Paediatric", img: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&q=80&w=600", link: "/paediatric" },
-    { name: "Gastroenterology", img: "https://images.unsplash.com/photo-1584516150909-c43483ee7932?auto=format&fit=crop&q=80&w=600", link: "/gastroenterology" }
+    { name: "Gastroenterology", img: "https://images.unsplash.com/photo-1584516150909-c43483ee7932?auto=format&fit=crop&q=80&w=600", link: "/gastroenterology" },
+    { name: "Hematology", img: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=600", link: "/hematology" },
+    { name: "Rheumatology", img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600", link: "/rheumatology" },
+    { name: "Interventional Radiology", img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600", link: "/interventional-radiology" }
 ];
 
 const wellnessList = [
